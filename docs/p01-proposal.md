@@ -1,8 +1,15 @@
-# Title of your Project: Project Proposal 
+# "Project Title": Project Proposal
+**Code Name: Sleep, Zebra, Sleep**
+## Authors
+  * Hanjiang Xu   xhj1026@uw.edu
+  * Risa Nabari   risan03@uw.edu
+  * Jett Chang-Lam  jcl9292@uw.edu
+## Affiliation
+  * INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
 
 **TODO**: Edit this file. Your project proposal goes here.
 
-For what to do, see the [`../instructions/`](../instructions/) directory, specifically: 
+For what to do, see the [`../instructions/`](../instructions/) directory, specifically:
 
 * [Design Brief](../instructions/project-design-brief.pdf)
 * [Project Proposal Requirements](../instructions/p01-proposal-requirements.md)

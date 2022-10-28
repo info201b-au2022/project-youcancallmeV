@@ -1,5 +1,5 @@
 # "Project Title": Project Proposal
-**Code Name: Sleep, Zebra, Sleep**
+**Code Name:** _Sleep, Zebra, Sleep_
 ## Authors
   * Hanjiang Xu   xhj1026@uw.edu
   * Risa Nabari   risan03@uw.edu

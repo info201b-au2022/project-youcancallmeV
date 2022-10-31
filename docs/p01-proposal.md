@@ -23,21 +23,20 @@ The direct stakeholder in our project is high school seniors and potential colle
 ## Research Questions
 
 ## The Dataset
-| Title | Number of Variables | 
-|---------------| --------------
+| Title | Number of Variables | Number of observations | Citation/URLs |
+| ------------- | -------------  | ------------- |  ------------- |
 |IPEDS Data | 108 | 1534 | College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions |
 
 ## Expected Implications
+Following are the two implications of our project:
+* We expect our findings to provide simple to comprehend data visualizations that help the user more succinctly review their options in college enrollment.
+* Additionally, the data analysis that we plan to do, will allow for the public at large as well as specific donors to have an overview of each college’s student body demographics and background to determine if they want to support their admissions processes.
 
 ## Limitations
-
-## Findings
-
-## Discussion
-
-## Conclusion
+This data is slightly out of date. The data was published on Kaggle approximately 4 years ago, meaning that it does not provide the most accurate information about current American colleges. Additionally, the intended user is likely to seek additional data regarding colleges that will affect their selections such as University ranking, cost of tuition, availability of housing, etc. that our dataset does not provide.
 
 ## Acknowledgements
+We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of inspiration on our project.
 
 ## References
 

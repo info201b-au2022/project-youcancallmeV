@@ -50,3 +50,4 @@ Following are few other research we came across while finding the best data for 
  * _University Rankings 2017 - dataset by education. (2016, September 14). data.world. https://data.world/education/university-rankings-2017_
 
 ## Appendix A: Questions
+One of the question concerned about this project is the complexity of our data. Since the data we find have 108 variables, it is impossible for us to use all the data that are provided. While building our project, can we select the data that we think it's necessary to include?  

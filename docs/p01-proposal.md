@@ -1,4 +1,4 @@
-# Information on Universities in the United States: Project Proposal
+# Information on Universities in the United States Project Proposal
 **Code Name:** _Sleep, Zebra, Sleep_
 
 ## Authors
@@ -41,6 +41,7 @@ The college application process can be frustrating. Getting information on colle
 ## The Dataset (400 words)
 * Describe how your dataset is related to your problem domain and, specifically, to your research questions. That is, how will your dataset enable you to answer your research questions?
 * Finally, describe the provenance of your dataset, addressing such key questions as: (a) Who collected the data? When? For what purpose? (b) How was the data collection effort funded? Who is likely to benefit from the data or make money? (c) How was the data validated and held secure? Is it credible and trustworthy? (d) How did you obtain the data? Do you credit the source of the data? (About 400 words.)
+
 | Title | Number of Variables | Number of observations | Citation/URLs |
 | ------------- | -------------  | ------------- |  ------------- |
 |IPEDS Data | 108 | 1534 | College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions |

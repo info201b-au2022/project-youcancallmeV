@@ -1,4 +1,4 @@
-# "Project Title": Project Proposal
+# **"Project Title": Project Proposal**
 **Code Name:** _Sleep, Zebra, Sleep_
 
 ## Authors
@@ -18,15 +18,17 @@ INFO-201: Technical Foundations of Informatics - The Information School - Univer
 ## Keywords
 Education; Identity (Race, Gender); Admission; Department; Acceptance rate; Enrollment; Graduation
 
-## Introduction (130/150)
-College application process can be frustrating. Getting information on colleges and universities, writing application essays, keeping track of various deadlines, as well as balancing school life is usually extremely challenging. In order to help the users experiencing difficulties, our project enables students to search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) on a university. This helps the users to save time as all the information is in one place which makes the overall research process of the university faster and more efficient. We are planning to have a search bar where you could search for a specific university, as well as a filter function where you could find universities by their geographical location, cost of admission (tuition), percentage of race and gender, acceptance rate, and more.
+## Introduction
+College application process can be frustrating. Getting information on colleges and universities, writing application essays, keeping track of various deadlines, as well as balancing school life is usually extremely challenging. In order to help the users experiencing difficulties, our project enables students to search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) on a university. This helps the users to save time as all the information is in one place which makes the overall research process of the university faster and more efficient. We are planning to have a search bar where you could search for a specific university, as well as a filter function where you could find universities by their geographical location, cost of admission (tuition), percentage of race and gender, acceptance rate, and more. Additionally, other viewers can use this analyzed data to gain a better understanding of how admissions is done is practice from college to college. This provides a welcome tool for those deciding whether or not to donate to their alma mater, if admissions practices is an important issue for them.
 
-## Problem Domain 
+## Problem Domain
 Direct and Indirect Stakeholders
 The direct stakeholder in our project is high school seniors and potential college students in the United States. Our data and visualization would provide them with useful information that eases their pressure on searching for the best college for each individual. The indirect stakeholder of the project would be college admissions officers. Colleges that are less well known yet obtain desirable characteristics will be exposed more to potential college students.
 
 ## Research Questions (3-5 Questions)
 * Present your 3-5 research questions. You should present each research question. For each research question, you should discuss why it is important and what motivates the question. (About 50 words for each question, so for four questions you would write about 200 words or more if needed.)
+* How does admissions for each American university relate on the factor of race of admitted students to the racial breakdown of the surrounding city's population?
+  * This is important because this is a genuine implemented process which reflects upon the character of the University. Many incoming college students place value upon the moral standings of people, organizations, and corporations. Colleges are no exception. Understanding the values of the institution that one will choose to spend four or more years at is of the utmost importance to many students, especially in the current political climate.
 
 ## The Dataset
 * Describe how your dataset is related to your problem domain and, specifically, to your research qeustions. That is, how will your dataset enable you to answer your research questions?

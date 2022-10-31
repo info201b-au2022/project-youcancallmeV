@@ -30,7 +30,7 @@ The college application process can be frustrating. Getting information on colle
 
 **_Possible harms and benefits_**
 * Benefits: Filtering information and making the college searching process easier; give less well-known colleges more exposure.
-* Harms: May direct views to incorrect conclusions based on the relatively limited amount of data in our dataset. Similarly, it may also cause users to disregard more important, user-specific information such as budget or personal geographical location. Another potential harms of a selecting tool is it might leads to over-research.
+* Harms: May direct views to incorrect conclusions based on the relatively limited amount of data in our dataset. Similarly, it may also cause users to disregard more important, user-specific information such as budget or personal geographical location. Another potential harms of a selecting tool is it might leads to "over-research" without realizing that "no one institution will fill all requirements" (Dix, 2016).  
 
 
 ## Research Questions (3-5 Questions)
@@ -59,9 +59,10 @@ We would like to thank the individual, Samson Qian, who had published this data 
 
 ## References
 Following are few other research we came across while finding the best data for our project
- * _Brint, Steven. American College Catalog Study Database, 1975-2011. Inter-university Consortium for Political and Social Research [distributor], 2013-11-01. https://doi.org/10.3886/ICPSR34851.v1_
- * _College Enrollment, Credit Attainment and Remediation of High School Graduates Statewide | Connecticut Data. (2021, May 3). https://data.ct.gov/Education/College-Enrollment-Credit-Attainment-and-Remediati/vb5y-z4r7_
- * _University Rankings 2017 - dataset by education. (2016, September 14). data.world. https://data.world/education/university-rankings-2017_
+  * _Dix, W. (2016, July 25). The Agony Of College Choice And How To Get Through It. Forbes. https://www.forbes.com/sites/willarddix/2016/07/25/the-agony-of-college-choice-and-how-to-get-through-it/?sh=51bfbfe53e53_
+  * _Brint, Steven. American College Catalog Study Database, 1975-2011. Inter-university Consortium for Political and Social Research [distributor], 2013-11-01. https://doi.org/10.3886/ICPSR34851.v1_
+  * _College Enrollment, Credit Attainment and Remediation of High School Graduates Statewide | Connecticut Data. (2021, May 3). https://data.ct.gov/Education/College-Enrollment-Credit-Attainment-and-Remediati/vb5y-z4r7_
+  * _University Rankings 2017 - dataset by education. (2016, September 14). data.world. https://data.world/education/university-rankings-2017_
 
 ## Appendix A: Questions
 One of the question concerned about this project is the complexity of our data. Since the data we find have 108 variables, it is impossible for us to use all the data that are provided. While building our project, can we select the data that we think it's necessary to include?  

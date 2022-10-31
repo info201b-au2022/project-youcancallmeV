@@ -21,19 +21,16 @@ Education; Identity (Race, Gender); Admission; Department; Acceptance rate; Enro
 ## Introduction
 The college application process can be frustrating. Getting information on colleges and universities, looking for financial aid, looking for the desired degree, as well as balancing school life is usually extremely challenging. To help the users experiencing difficulties, our project enables students to search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) on a university. Our project plans to help the users to save time as all the information is in one place which makes the overall research process of the university faster and more efficient. For our project, we plan to have a search bar where users can search for information regarding a specific university. Moreover, we plan to design a filter function that allows users to select colleges that has specific characteristics. For example, users would be able to select colleges that give student loan aid to first-year students, colleges that have a high percentage of a certain race, and moreover.
 
-## Problem Domain
-Project framing
-* Need content
-
-Human values
-* Need content
-
-Direct and Indirect Stakeholders
+## Problem Domain (400 words)
+**_Direct and Indirect Stakeholders_**
 * The direct stakeholder in our project is high school seniors and potential college students in the United States. Our data and visualization would provide them with useful information that eases their pressure on searching for the best college for each individual. The indirect stakeholder of the project would be college admissions officers. Colleges that are less well known yet obtain desirable characteristics will be exposed more to potential college students.
 
-Possible harms and benefits
+**_Human values_**
+* Need content
+
+**_Possible harms and benefits_**
 * Benefits: Filtering information and making the college searching process easier; give less well-known colleges more exposure.
-* Harms: May direct views to incorrect conclusions based on the relatively limited amount of data in our dataset. Similarly, it may also cause users to disregard more important, user-specific information such as budget or personal geographical location.
+* Harms: May direct views to incorrect conclusions based on the relatively limited amount of data in our dataset. Similarly, it may also cause users to disregard more important, user-specific information such as budget or personal geographical location. Another potential harms of a selecting tool is it might leads to over-research.
 
 
 ## Research Questions (3-5 Questions)
@@ -41,8 +38,8 @@ Possible harms and benefits
 * How does admissions for each American university relate on the factor of race of admitted students to the racial breakdown of the surrounding city's population?
   * This is important because this is a genuine implemented process which reflects upon the character of the University. Many incoming college students place value upon the moral standings of people, organizations, and corporations. Colleges are no exception. Understanding the values of the institution that one will choose to spend four or more years at is of the utmost importance to many students, especially in the current political climate.
 
-## The Dataset
-* Describe how your dataset is related to your problem domain and, specifically, to your research qeustions. That is, how will your dataset enable you to answer your research questions?
+## The Dataset (400 words)
+* Describe how your dataset is related to your problem domain and, specifically, to your research questions. That is, how will your dataset enable you to answer your research questions?
 * Finally, describe the provenance of your dataset, addressing such key questions as: (a) Who collected the data? When? For what purpose? (b) How was the data collection effort funded? Who is likely to benefit from the data or make money? (c) How was the data validated and held secure? Is it credible and trustworthy? (d) How did you obtain the data? Do you credit the source of the data? (About 400 words.)
 | Title | Number of Variables | Number of observations | Citation/URLs |
 | ------------- | -------------  | ------------- |  ------------- |
@@ -53,7 +50,7 @@ Following are the two implications of our project:
 * We expect our findings to provide simple to comprehend data visualizations that help the user more succinctly review their options in college enrollment.
 * Additionally, the data analysis that we plan to do, will allow for the public at large as well as specific donors to have an overview of each college’s student body demographics and background to determine if they want to support their admissions processes.
 
-## Limitations
+## Limitations (150 words)
 This data is slightly out of date. The data was published on Kaggle approximately 4 years ago, meaning that it does not provide the most accurate information about current American colleges. Additionally, the intended user is likely to seek additional data regarding colleges that will affect their selections such as University ranking, cost of tuition, availability of housing, etc. that our dataset does not provide.
 
 ## Acknowledgements

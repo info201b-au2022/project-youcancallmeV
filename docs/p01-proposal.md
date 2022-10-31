@@ -52,7 +52,10 @@ Following are the two implications of our project:
 * Additionally, the data analysis that we plan to do, will allow for the public at large as well as specific donors to have an overview of each college’s student body demographics and background to determine if they want to support their admissions processes.
 
 ## Limitations (150 words)
-This data is slightly out of date. The data was published on Kaggle approximately 4 years ago, meaning that it does not provide the most accurate information about current American colleges. Additionally, the intended user is likely to seek additional data regarding colleges that will affect their selections such as University ranking, cost of tuition, availability of housing, etc. that our dataset does not provide.
+Following are couple of limitations of our projects and database
+  * Even though our project provides the basic details of institutions, it does not include some key information such as application deadline. We believe it is important for potential college students to know their deadlines yet our database does not include this information.
+  * This data is slightly out of date. The data was published on Kaggle approximately 4 years ago, meaning that it does not provide the most accurate information about current American colleges. Additionally, the intended user is likely to seek additional data regarding colleges that will affect their selections such as University ranking, availability of housing, etc. that our dataset does not provide.
+  * application requirements
 
 ## Acknowledgements
 We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of inspiration on our project.
@@ -62,7 +65,6 @@ Following are few other research we came across while finding the best data for 
   * _Dix, W. (2016, July 25). The Agony Of College Choice And How To Get Through It. Forbes. https://www.forbes.com/sites/willarddix/2016/07/25/the-agony-of-college-choice-and-how-to-get-through-it/?sh=51bfbfe53e53_
   * _Brint, Steven. American College Catalog Study Database, 1975-2011. Inter-university Consortium for Political and Social Research [distributor], 2013-11-01. https://doi.org/10.3886/ICPSR34851.v1_
   * _College Enrollment, Credit Attainment and Remediation of High School Graduates Statewide | Connecticut Data. (2021, May 3). https://data.ct.gov/Education/College-Enrollment-Credit-Attainment-and-Remediati/vb5y-z4r7_
-  * _University Rankings 2017 - dataset by education. (2016, September 14). data.world. https://data.world/education/university-rankings-2017_
 
 ## Appendix A: Questions
 One of the question concerned about this project is the complexity of our data. Since the data we find have 108 variables, it is impossible for us to use all the data that are provided. While building our project, can we select the data that we think it's necessary to include?  

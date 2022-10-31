@@ -1,4 +1,4 @@
-# "Project Title": Project Proposal
+# Information on Universities in the United States: Project Proposal
 **Code Name:** _Sleep, Zebra, Sleep_
 
 ## Authors
@@ -9,21 +9,32 @@
 ## Affiliation
 INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
 
-## Date
+## Date 🗓
 10/28, Autumn 2022
 
 ## Abstract
-* Write a short abstract of three sentences. Your abstract should summarize your entire project, but only the very most important aspects. Here are two examples of how you might structure your abstract: (1) "Our main question is .... This question is important because .... To address the question, we will ...." and (2) "We are concerned with ..., because .... To address this concern, we plan to ...."
+In this project, we are concerned with whether potential college students have an efficient way of selecting a suitable college in the United States. Because there are so many colleges and universities in America, it becomes complicated when doing research. To address this concern, we plan to design a simple tool that allows users to select colleges ( colleges/universities included in our database) based on different characteristics(e.g. SAT scores, race population percentage, undergraduate enrollment, etc.)
 
 ## Keywords
 Education; Identity (Race, Gender); Admission; Department; Acceptance rate; Enrollment; Graduation
 
-## Introduction (130/150)
-College application process can be frustrating. Getting information on colleges and universities, writing application essays, keeping track of various deadlines, as well as balancing school life is usually extremely challenging. In order to help the users experiencing difficulties, our project enables students to search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) on a university. This helps the users to save time as all the information is in one place which makes the overall research process of the university faster and more efficient. We are planning to have a search bar where you could search for a specific university, as well as a filter function where you could find universities by their geographical location, cost of admission (tuition), percentage of race and gender, acceptance rate, and more.
+## Introduction
+The college application process can be frustrating. Getting information on colleges and universities, looking for financial aid, looking for the desired degree, as well as balancing school life is usually extremely challenging. To help the users experiencing difficulties, our project enables students to search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) on a university. Our project plans to help the users to save time as all the information is in one place which makes the overall research process of the university faster and more efficient. For our project, we plan to have a search bar where users can search for information regarding a specific university. Moreover, we plan to design a filter function that allows users to select colleges that has specific characteristics. For example, users would be able to select colleges that give student loan aid to first-year students, colleges that have a high percentage of a certain race, and moreover.
 
-## Problem Domain 
+## Problem Domain
+Project framing
+* Need content
+
+Human values
+* Need content
+
 Direct and Indirect Stakeholders
-The direct stakeholder in our project is high school seniors and potential college students in the United States. Our data and visualization would provide them with useful information that eases their pressure on searching for the best college for each individual. The indirect stakeholder of the project would be college admissions officers. Colleges that are less well known yet obtain desirable characteristics will be exposed more to potential college students.
+* The direct stakeholder in our project is high school seniors and potential college students in the United States. Our data and visualization would provide them with useful information that eases their pressure on searching for the best college for each individual. The indirect stakeholder of the project would be college admissions officers. Colleges that are less well known yet obtain desirable characteristics will be exposed more to potential college students.
+
+Possible harms and benefits
+* Benefits: Filtering information and making the college searching process easier; give less well-known colleges more exposure.
+* Harms: May direct views to incorrect conclusions based on the relatively limited amount of data in our dataset. Similarly, it may also cause users to disregard more important, user-specific information such as budget or personal geographical location.
+
 
 ## Research Questions (3-5 Questions)
 * Present your 3-5 research questions. You should present each research question. For each research question, you should discuss why it is important and what motivates the question. (About 50 words for each question, so for four questions you would write about 200 words or more if needed.)

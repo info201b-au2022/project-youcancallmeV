@@ -23,7 +23,7 @@ The direct stakeholder in our project is high school seniors and potential colle
 ## Research Questions
 
 ## The Dataset
-|Title | Number of Variables | Number of Observation | Citation / URLs |
+| Title | Number of Variables | 
 |---------------| --------------
 |IPEDS Data | 108 | 1534 | College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions |
 

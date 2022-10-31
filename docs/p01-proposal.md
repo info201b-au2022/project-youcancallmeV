@@ -1,14 +1,19 @@
 # "Project Title": Project Proposal
 **Code Name:** _Sleep, Zebra, Sleep_
+
 ## Authors
   * Hanjiang Xu   xhj1026@uw.edu
   * Risa Nabari   risan03@uw.edu
   * Jett Chang-Lam  jcl9292@uw.edu
+  
 ## Affiliation
   * INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
+
 ## Date
   * 10/28, Autumn 2022
+
 ## Abstract
+need content
 
 ## Keywords
 Education; Identity (Race, Gender); Admission; Department; Acceptance rate; Enrollment; Graduation
@@ -39,12 +44,9 @@ This data is slightly out of date. The data was published on Kaggle approximatel
 We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of inspiration on our project.
 
 ## References
+Following are few other research we came across while finding the best data for our project
+ * _Brint, Steven. American College Catalog Study Database, 1975-2011. Inter-university Consortium for Political and Social Research [distributor], 2013-11-01. https://doi.org/10.3886/ICPSR34851.v1_
+ * _College Enrollment, Credit Attainment and Remediation of High School Graduates Statewide | Connecticut Data. (2021, May 3). https://data.ct.gov/Education/College-Enrollment-Credit-Attainment-and-Remediati/vb5y-z4r7_
+ * _University Rankings 2017 - dataset by education. (2016, September 14). data.world. https://data.world/education/university-rankings-2017_
 
 ## Appendix A: Questions
-
-**TODO**: Edit this file. Your project proposal goes here.
-
-For what to do, see the [`../instructions/`](../instructions/) directory, specifically:
-
-* [Design Brief](../instructions/project-design-brief.pdf)
-* [Project Proposal Requirements](../instructions/p01-proposal-requirements.md)

@@ -2,15 +2,15 @@
 **Code Name:** _Sleep, Zebra, Sleep_
 
 ## Authors
-  * Hanjiang Xu   xhj1026@uw.edu
-  * Risa Nabari   risan03@uw.edu
-  * Jett Chang-Lam  jcl9292@uw.edu
-  
+  * **Hanjiang Xu**    xhj1026@uw.edu
+  * **Risa Nabari**    risan03@uw.edu
+  * **Jett Chang-Lam**    jcl9292@uw.edu
+
 ## Affiliation
-  * INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
+INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
 
 ## Date
-  * 10/28, Autumn 2022
+10/28, Autumn 2022
 
 ## Abstract
 need content

@@ -13,26 +13,29 @@ INFO-201: Technical Foundations of Informatics - The Information School - Univer
 10/28, Autumn 2022
 
 ## Abstract
-need content
+* Write a short abstract of three sentences. Your abstract should summarize your entire project, but only the very most important aspects. Here are two examples of how you might structure your abstract: (1) "Our main question is .... This question is important because .... To address the question, we will ...." and (2) "We are concerned with ..., because .... To address this concern, we plan to ...."
 
 ## Keywords
 Education; Identity (Race, Gender); Admission; Department; Acceptance rate; Enrollment; Graduation
 
-## Introduction
+## Introduction (130/150)
 College application process can be frustrating. Getting information on colleges and universities, writing application essays, keeping track of various deadlines, as well as balancing school life is usually extremely challenging. In order to help the users experiencing difficulties, our project enables students to search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) on a university. This helps the users to save time as all the information is in one place which makes the overall research process of the university faster and more efficient. We are planning to have a search bar where you could search for a specific university, as well as a filter function where you could find universities by their geographical location, cost of admission (tuition), percentage of race and gender, acceptance rate, and more.
 
-## Problem Domain
+## Problem Domain 
 Direct and Indirect Stakeholders
 The direct stakeholder in our project is high school seniors and potential college students in the United States. Our data and visualization would provide them with useful information that eases their pressure on searching for the best college for each individual. The indirect stakeholder of the project would be college admissions officers. Colleges that are less well known yet obtain desirable characteristics will be exposed more to potential college students.
 
-## Research Questions
+## Research Questions (3-5 Questions)
+* Present your 3-5 research questions. You should present each research question. For each research question, you should discuss why it is important and what motivates the question. (About 50 words for each question, so for four questions you would write about 200 words or more if needed.)
 
 ## The Dataset
+* Describe how your dataset is related to your problem domain and, specifically, to your research qeustions. That is, how will your dataset enable you to answer your research questions?
+* Finally, describe the provenance of your dataset, addressing such key questions as: (a) Who collected the data? When? For what purpose? (b) How was the data collection effort funded? Who is likely to benefit from the data or make money? (c) How was the data validated and held secure? Is it credible and trustworthy? (d) How did you obtain the data? Do you credit the source of the data? (About 400 words.)
 | Title | Number of Variables | Number of observations | Citation/URLs |
 | ------------- | -------------  | ------------- |  ------------- |
 |IPEDS Data | 108 | 1534 | College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions |
 
-## Expected Implications
+## Expected Implications (67/150)
 Following are the two implications of our project:
 * We expect our findings to provide simple to comprehend data visualizations that help the user more succinctly review their options in college enrollment.
 * Additionally, the data analysis that we plan to do, will allow for the public at large as well as specific donors to have an overview of each college’s student body demographics and background to determine if they want to support their admissions processes.

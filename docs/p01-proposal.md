@@ -37,10 +37,13 @@ The college application process can be frustrating. Getting information on colle
 
 ## Research Questions
 * How can we improve the data set?
-  * This question is important because understanding the data is crucial when utilizing them for a purpose of our own project. This enables us to think in depth and critically, which helps to make a reliable and more powerful project.
+  * This question is important because understanding the data is crucial when utilizing them for a purpose of our project. This enables us to think in-depth and critically, which helps to make a reliable and more powerful project. By improving the data set, we will be able to provide users with more accurate results that might potentially speed up their admission process.
 
-* How does admissions for each American university relate on the factor of race of admitted students to the racial breakdown of the surrounding city's population?
-  * This is important because this is a genuine implemented process which reflects upon the character of the University. Many incoming college students place value upon the moral standings of people, organizations, and corporations. Colleges are no exception. Understanding the values of the institution that one will choose to spend four or more years at is of the utmost importance to many students, especially in the current political climate.
+* How do admissions for each American university relate the factor of the race of admitted students to the racial breakdown of the surrounding city's population?
+  * This is important because this is a genuinely implemented process that reflects upon the character of the University. Many incoming college students place value upon the moral standings of people, organizations, and corporations. Colleges are no exception. Understanding the values of the institution that one will choose to spend four or more years at is of the utmost importance to many students, especially in the current political climate.
+
+* What is the major concerns when one is choosing college? Is it location? tuition? Or something else.
+  * This is an very important question because by discussing it, we will be able to find the general parttern of college choosing. We will be able to figure out the general parttern behind the college admission process and determine what is the top priority of people. For example, some people might value college ranking and some might prioritize tuition.
 
 ## The Dataset
 Our central question of this project revolves around the process of choosing college for individuals that are considering going to college. Personally speaking, as college undergraduate students, we believe college searching can be tiring and time consuming for everyone. There are numerous colleges and universities across the land of the United States, and it would be a complex process for people to choose the one and only. The data set we have found, covered around 1534 institutions in America and 108 characteristic that colleges might obtain. This data set is a  collection of critical information regarding colleges that we are interested in. In this case, we believe this data set would serves our project the best since we intend to build a tool that benefits potential college students the best, and help them reduce their work load as much as possible.

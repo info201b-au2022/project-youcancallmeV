@@ -1,14 +1,14 @@
 # Information on Universities in the United States Project Proposal
 **Code Name:** _Sleep, Zebra, Sleep_
 
-## Authors
+## Authors 💻
 **Hanjiang Xu**    xhj1026@uw.edu
 <br>
 **Risa Nabari**    risan03@uw.edu
 <br>
 **Jett Chang-Lam**    jcl9292@uw.edu
 
-## Affiliation
+## Affiliation 🏫
 INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
 
 ## Date 🗓
@@ -36,15 +36,13 @@ The college application process can be frustrating. Getting information on colle
 
 
 ## Research Questions
-
 * How can we improve the data set?
   * This question is important because understanding the data is crucial when utilizing them for a purpose of our own project. This enables us to think in depth and critically, which helps to make a reliable and more powerful project.
 
 * How does admissions for each American university relate on the factor of race of admitted students to the racial breakdown of the surrounding city's population?
   * This is important because this is a genuine implemented process which reflects upon the character of the University. Many incoming college students place value upon the moral standings of people, organizations, and corporations. Colleges are no exception. Understanding the values of the institution that one will choose to spend four or more years at is of the utmost importance to many students, especially in the current political climate.
 
-## The Dataset (400 words)
-
+## The Dataset
 Our central question of this project revolves around the process of choosing college for individuals that are considering going to college. Personally speaking, as college undergraduate students, we believe college searching can be tiring and time consuming for everyone. There are numerous colleges and universities across the land of the United States, and it would be a complex process for people to choose the one and only. The data set we have found, covered around 1534 institutions in America and 108 characteristic that colleges might obtain. This data set is a  collection of critical information regarding colleges that we are interested in. In this case, we believe this data set would serves our project the best since we intend to build a tool that benefits potential college students the best, and help them reduce their work load as much as possible.
 
 * Author and potential beneficiary
@@ -57,26 +55,26 @@ Our central question of this project revolves around the process of choosing col
 | ------------- | -------------  | ------------- |  ------------- |
 |College Admissions | 108 | 1534 | College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions |
 
-## Expected Implications (67/150)
-Following are the two implications of our project:
-* We expect our findings to provide simple to comprehend data visualizations that help the user more succinctly review their options in college enrollment.
-* Additionally, the data analysis that we plan to do, will allow for the public at large as well as specific donors to have an overview of each college’s student body demographics and background to determine if they want to support their admissions processes.
+## Expected Implications
+The following are some implications of our project:
+* We expect our findings to provide simple to comprehend data visualizations that help the user more succinctly review their options in college enrollment. For example, users will be able to filter colleges that have one or more specific characteristics.
+* Additionally, the data analysis that we plan to do will allow for the public at large as well as specific donors to have an overview of each college’s student body demographics and background to determine if they want to support their admissions processes. For example, donors might want to support an institution that has an equal distribution of different races.
+* For the design part, we imagine making our platform/website/search tool as simple as possible. We will have features separated, thus user would not be confused by different aspects of our tool. For example, the visualization feature, searching feature and the filtering feature will be three different aspects.  
 
 ## Limitations
-Following are couple of limitations of our projects and database
+The followings are couple of limitations of our projects and database
   * Even though our project provides the basic details of institutions, it does not include some key information such as the application deadline. We believe it is important for potential college students to know their deadlines yet our database does not include this information.
   * This data is slightly out of date. The data was published on Kaggle approximately 4 years ago, meaning that it does not provide the most accurate information about current American colleges. Additionally, the intended user is likely to seek additional data regarding colleges that will affect their selections such as University ranking, availability of housing, etc. that our dataset does not provide.
   * Some of the data are not available which limits the amount of data as well as the reliability of the data set itself. For example, Athens State University does not have data on the number of applicants, admission total, acceptance rate, and more. This could be because the university itself is not sharing the information with the public. This can be difficult for students who may be seeking to apply to the university. Overcoming the inconsistencies in the data set is difficult but we could provide a link or a list of the university website or phone number so that it can be easier for the users to gain information.
-
 
 ## Acknowledgements
 We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of inspiration on our project.
 
 ## References
-Following is the citation to our database:
+The following is the citation to our database:
   * _College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions_
 
-Following are few other research we came across while finding the best data for our project
+The followings are few other research we came across while finding the best data for our project
   * _Dix, W. (2016, July 25). The Agony Of College Choice And How To Get Through It. Forbes. https://www.forbes.com/sites/willarddix/2016/07/25/the-agony-of-college-choice-and-how-to-get-through-it/?sh=51bfbfe53e53_
   * _Who Are Key Website Project Stakeholders in Higher Education? (2022, January 19). OHO Interactive. https://www.oho.com/blog/website-project-stakeholders-higher-education_
   * _Shahin, M., Chaudron, M. R., Hussain, W., Shams, R., Perera, H., Oliver, G., & Whittle, J. (2022). Human values in software development artefacts: A case study on issue discussions in three Android applications. Information and Software Technology, 141, 106731. https://doi.org/10.1016/j.infsof.2021.106731_

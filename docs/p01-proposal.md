@@ -35,18 +35,27 @@ The college application process can be frustrating. Getting information on colle
 * Harms: May direct views to incorrect conclusions based on the relatively limited amount of data in our dataset. Similarly, it may also cause users to disregard more important, user-specific information such as budget or personal geographical location. Similarly, there is a chance that this data, as it is slightly out of date, may confuse the reader and cause them to falsely interpret it as data defining the current times rather than treating it as a snapshot of the past. Another potential harms of a selecting tool is it might leads to "over-research" without realizing that "no one institution will fill all requirements" _(Dix, 2016)_.  
 
 
-## Research Questions (3-5 Questions)
-* Present your 3-5 research questions. You should present each research question. For each research question, you should discuss why it is important and what motivates the question. (About 50 words for each question, so for four questions you would write about 200 words or more if needed.)
+## Research Questions
+
+* How can we improve the data set?
+  * This question is important because understanding the data is crucial when utilizing them for a purpose of our own project. This enables us to think in depth and critically, which helps to make a reliable and more powerful project.
+
 * How does admissions for each American university relate on the factor of race of admitted students to the racial breakdown of the surrounding city's population?
   * This is important because this is a genuine implemented process which reflects upon the character of the University. Many incoming college students place value upon the moral standings of people, organizations, and corporations. Colleges are no exception. Understanding the values of the institution that one will choose to spend four or more years at is of the utmost importance to many students, especially in the current political climate.
 
 ## The Dataset (400 words)
-* Describe how your dataset is related to your problem domain and, specifically, to your research questions. That is, how will your dataset enable you to answer your research questions?
-* Finally, describe the provenance of your dataset, addressing such key questions as: (a) Who collected the data? When? For what purpose? (b) How was the data collection effort funded? Who is likely to benefit from the data or make money? (c) How was the data validated and held secure? Is it credible and trustworthy? (d) How did you obtain the data? Do you credit the source of the data? (About 400 words.)
+
+Our central question of this project revolves around the process of choosing college for individuals that are considering going to college. Personally speaking, as college undergraduate students, we believe college searching can be tiring and time consuming for everyone. There are numerous colleges and universities across the land of the United States, and it would be a complex process for people to choose the one and only. The data set we have found, covered around 1534 institutions in America and 108 characteristic that colleges might obtain. This data set is a  collection of critical information regarding colleges that we are interested in. In this case, we believe this data set would serves our project the best since we intend to build a tool that benefits potential college students the best, and help them reduce their work load as much as possible.
+
+* Author and potential beneficiary
+  * We obtained our data set on the internet by searching public data on admission information regarding universities across the United States. The collector of the data is named Samson Qian who is currently studying his master's at MIT. He did not elaborate on the purpose behind this data collection. We believe the creator of this data has no intention of gaining money with this data since it is posted on an open website and licensed in the public domain. Individuals doing college admission-related projects will benefit from this data, just like our project. For example, individuals who are doing a SAT/ACT score research might benefit from this data set. Moreover, individuals who are searching for college information might also benefit from this data if they search directly in the data set.
+
+* Validity and credibility
+  * Through our research, we find that there might be an issue with the credibility of this database. Our data set was collected on Kaggle, and posted by Samson Qian, who is currently doing a master's of Finance student at the Massachusetts Institute of Technology (MIT) studying Financial Engineering, graduating in December 2022. We have the information of the author which can be somewhat reliable but he does not provide information on where he got the data from which decreases the credibility of the dataset. Yet, we find a lot of the information that are included in the data set to match with the current information of colleges (For example, location, zip code). That gives certain validity to our data set.  
 
 | Title | Number of Variables | Number of observations | Citation/URLs |
 | ------------- | -------------  | ------------- |  ------------- |
-|IPEDS Data | 108 | 1534 | College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions |
+|College Admissions | 108 | 1534 | College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions |
 
 ## Expected Implications (67/150)
 Following are the two implications of our project:
@@ -64,10 +73,11 @@ Following are couple of limitations of our projects and database
 We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of inspiration on our project.
 
 ## References
+Following is the citation to our database:
+  * _College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions_
+
 Following are few other research we came across while finding the best data for our project
   * _Dix, W. (2016, July 25). The Agony Of College Choice And How To Get Through It. Forbes. https://www.forbes.com/sites/willarddix/2016/07/25/the-agony-of-college-choice-and-how-to-get-through-it/?sh=51bfbfe53e53_
-  * _Brint, Steven. American College Catalog Study Database, 1975-2011. Inter-university Consortium for Political and Social Research [distributor], 2013-11-01. https://doi.org/10.3886/ICPSR34851.v1_
-  * _College Enrollment, Credit Attainment and Remediation of High School Graduates Statewide | Connecticut Data. (2021, May 3). https://data.ct.gov/Education/College-Enrollment-Credit-Attainment-and-Remediati/vb5y-z4r7_
   * _Who Are Key Website Project Stakeholders in Higher Education? (2022, January 19). OHO Interactive. https://www.oho.com/blog/website-project-stakeholders-higher-education_
   * _Shahin, M., Chaudron, M. R., Hussain, W., Shams, R., Perera, H., Oliver, G., & Whittle, J. (2022). Human values in software development artefacts: A case study on issue discussions in three Android applications. Information and Software Technology, 141, 106731. https://doi.org/10.1016/j.infsof.2021.106731_
 

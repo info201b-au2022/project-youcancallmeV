@@ -13,7 +13,7 @@ college_admission <- read.csv("https://raw.githubusercontent.com/info201b-au2022
 
 # This is a aggregated data set 
 college_admission_aggregated <- college_admission %>%
-group_by(State.abbreviation) %>%
+  group_by(State.abbreviation) %>%
   select(
     Name, 
     State.abbreviation, 

@@ -12,8 +12,7 @@ college_admission_aggregated <- college_admission %>%
     Name, 
     State.abbreviation, 
     Percent.admitted...total,
-    Percent.of.freshmen.submitting.ACT.scores,
-    Percent.of.freshmen.submitting.ACT.scores,
+    Percent.of.freshmen.submitting.SAT.scores,
     Estimated.undergraduate.enrollment..total,
     Total.price.for.in.state.students.living.on.campus.2013.14,
     Total.price.for.out.of.state.students.living.on.campus.2013.14
@@ -26,22 +25,56 @@ View(college_admission_no_NA)
 
 # Following are five values that our project is going to be calculating: 
 #   Average percent admitted rate of each state
-percant_admitted <- college_admission_no_NA %>%
+percent_admitted <- college_admission_no_NA %>%
   group_by(State.abbreviation) %>%
   summarise(
-    average_admit = mean(Percent.admitted...total)
+    average_admit = round(mean(Percent.admitted...total), digits = 2)
   )
-  
-#   Average estimated undergraduate enrollment
+# Average percent admitted rate of Washington 
+wa_percent_admitted <- percent_admitted %>%
+  filter(State.abbreviation == "Washington") %>%
+  pull()
+
+# Average estimated undergraduate enrollment
 estimate_undergraduate <- college_admission_no_NA %>%
   group_by(State.abbreviation) %>%
   summarise(
-    average_undergraduate = mean(Estimated.undergraduate.enrollment..total)
+    average_undergraduate = round(mean(Estimated.undergraduate.enrollment..total), digits = 0)
   )
-  
-#   Average percent of freshman submitted SAT/ACT scores
+# Average estimated undergraduate enrollment of Washington 
+wa_estimate_undergraduate <- estimate_undergraduate %>%
+  filter(State.abbreviation == "Washington") %>%
+  pull()
 
-#   Average total price for in-state student living on campus
+# Average percent of freshman submitted SAT/ACT scores
+average_SAT_submit <- college_admission_no_NA %>%
+  group_by(State.abbreviation) %>%
+  summarise(
+    average_submit_rate = round(mean(Percent.of.freshmen.submitting.SAT.scores), digits = 2)
+  )
+# Average estimated undergraduate enrollment of Washington 
+wa_estimate_undergraduate <- estimate_undergraduate %>%
+  filter(State.abbreviation == "Washington") %>%
+  pull()
 
-#   Average total price for out-of-state student living on campus
+# Average total price for in-state student living on campus
+average_in_state <- college_admission_no_NA %>%
+  group_by(State.abbreviation) %>%
+  summarise(
+    average_undergraduate = round(mean(Total.price.for.in.state.students.living.on.campus.2013.14), digits = 2)
+  )
+# Average estimated undergraduate enrollment of Washington 
+wa_in_state <- average_in_state %>%
+  filter(State.abbreviation == "Washington") %>%
+  pull()
 
+# Average total price for out-of-state student living on campus
+average_out_state <- college_admission_no_NA %>%
+  group_by(State.abbreviation) %>%
+  summarise(
+    average_undergraduate = round(mean(Total.price.for.out.of.state.students.living.on.campus.2013.14), digits = 2)
+  )
+# Average estimated undergraduate enrollment of Washington 
+wa_out_state <- average_out_state %>%
+  filter(State.abbreviation == "Washington") %>%
+  pull()

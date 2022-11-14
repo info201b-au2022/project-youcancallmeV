@@ -5,6 +5,9 @@
 library(dplyr)
 library(tidyverse)
 
+install.packages("ggplot2") # once per machine
+library("ggplot2")          # in each relevant script
+
 # Following is our date set named 'college_admission'
 college_admission <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv")
 
@@ -22,3 +25,9 @@ college_admission_aggregated <- college_admission %>%
   )
 
 college_admission_no_NA <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
+
+ggplot(college_admission_no_NA) +
+  geom_point(mapping = aes(
+    x = Name, y = Total.price.for.out.of.state.students.living.on.campus.2013.14
+  )
+             )

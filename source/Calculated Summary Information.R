@@ -53,7 +53,7 @@ average_SAT_submit <- college_admission_no_NA %>%
     average_submit_rate = round(mean(Percent.of.freshmen.submitting.SAT.scores), digits = 2)
   )
 # Average percent of freshman submitted SAT scores of Washington 
-wa_average_SAT_submit <- average_SAT_submit %>%
+wa_SAT_submit_rate <- average_SAT_submit %>%
   filter(State.abbreviation == "Washington") %>%
   pull()
 

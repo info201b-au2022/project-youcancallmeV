@@ -1,18 +1,19 @@
-# Project 2 - Table of summary information 
+# Project 2 - Table of summary information
 # This is the .R source file that creates a table of summary information
 # The code for the table are following
 library(dplyr)
 
 # Following is our date set named 'college_admission'
 college_admission <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv",
-                              stringsAsFactors=FALSE, na.strings = ".")
+  stringsAsFactors = FALSE, na.strings = "."
+)
 
-# This is the aggregated data set we will be using 
+# This is the aggregated data set we will be using
 college_admission_aggregated <- college_admission %>%
   group_by(State.abbreviation) %>%
   select(
-    Name, 
-    State.abbreviation, 
+    Name,
+    State.abbreviation,
     Percent.admitted...total,
     Percent.of.freshmen.submitting.SAT.scores,
     Estimated.undergraduate.enrollment..total,
@@ -20,4 +21,4 @@ college_admission_aggregated <- college_admission %>%
     Total.price.for.out.of.state.students.living.on.campus.2013.14
   )
 
-table(college_admission_aggregated$State.abbreviation)
+# Following is the table of summary information

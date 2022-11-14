@@ -1,4 +1,4 @@
-# Project 2 - Calculated summary information 
+# Project 2 - Summary_info.R
 # This is the .R source file that calculates summary information to included in our report
 # The code for calculation are following
 
@@ -7,12 +7,12 @@ library(dplyr)
 # Following is our date set named 'college_admission'
 college_admission <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv")
 
-# This is a aggregated data set that include information used for calculation 
+# This is a aggregated data set that include information used for calculation
 college_admission_aggregated <- college_admission %>%
   group_by(State.abbreviation) %>%
   select(
-    Name, 
-    State.abbreviation, 
+    Name,
+    State.abbreviation,
     Percent.admitted...total,
     Percent.of.freshmen.submitting.SAT.scores,
     Estimated.undergraduate.enrollment..total,
@@ -21,70 +21,48 @@ college_admission_aggregated <- college_admission %>%
   )
 
 # Since we are calculating average, it would be very inconvenient if the school's data is not available
-# Thus, we will be excluding the schools that contains NA values in the columns we desire 
+# Thus, we will be excluding the schools that contains NA values in the columns we desire
 college_admission_no_NA <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
-View(college_admission_no_NA)
 
-# Following are five values that our project is going to be calculating: 
-#   Average percent admitted rate of each state
-percent_admitted <- college_admission_no_NA %>%
+# Following is a list create to store summary information of our dataset 
+summary_info <- list(college_admission_aggregated)
+summary_info$num_observations <- nrow(college_admission_aggregated)
+
+# summary info 1: schools with highest admit rate in each state
+summary_info$max_admit_rate <- college_admission_aggregated %>%
   group_by(State.abbreviation) %>%
-  summarise(
-    average_admit = round(mean(Percent.admitted...total), digits = 2)
-  )
-# Average percent admitted rate of Washington 
-wa_percent_admitted <- percent_admitted %>%
-  filter(State.abbreviation == "Washington") %>%
-  pull()
+  filter(Percent.admitted...total == max(Percent.admitted...total, na.rm = T)) %>%
+  select(State.abbreviation, Name, Percent.admitted...total)
 
-# Average estimated undergraduate enrollment
-estimate_undergraduate <- college_admission_no_NA %>%
+# summary info 1: schools with highest admit rate in each state
+summary_info$max_admit_rate <- college_admission_aggregated %>%
   group_by(State.abbreviation) %>%
-  summarise(
-    average_undergraduate = round(mean(Estimated.undergraduate.enrollment..total), digits = 0)
-  )
-# Average estimated undergraduate enrollment of Washington 
-wa_estimate_undergraduate <- estimate_undergraduate %>%
-  filter(State.abbreviation == "Washington") %>%
-  pull()
+  filter(Percent.admitted...total == max(Percent.admitted...total, na.rm = T)) %>%
+  select(State.abbreviation, Name, Percent.admitted...total)
 
-# Average percent of freshman submitted SAT scores
-average_SAT_submit <- college_admission_no_NA %>%
+# summary info 2: schools with highest SAT score submit rate
+summary_info$max_SAT_rate <- college_admission_aggregated %>%
   group_by(State.abbreviation) %>%
-  summarise(
-    average_submit_rate = round(mean(Percent.of.freshmen.submitting.SAT.scores), digits = 2)
-  )
-# Average percent of freshman submitted SAT scores of Washington 
-wa_SAT_submit_rate <- average_SAT_submit %>%
-  filter(State.abbreviation == "Washington") %>%
-  pull()
+  filter(Percent.of.freshmen.submitting.SAT.scores == max(Percent.of.freshmen.submitting.SAT.scores, na.rm = T)) %>%
+  select(State.abbreviation, Name, Percent.of.freshmen.submitting.SAT.scores)
 
-# Average total price for in-state student living on campus
-average_in_state <- college_admission_no_NA %>%
+# summary info 3: schools with highest undergraduate enrollment
+summary_info$max_SAT_rate <- college_admission_aggregated %>%
   group_by(State.abbreviation) %>%
-  summarise(
-    average_undergraduate = round(mean(Total.price.for.in.state.students.living.on.campus.2013.14), digits = 2)
-  )
-# Average total price for in-state student living on campus of Washington 
-wa_in_state <- average_in_state %>%
-  filter(State.abbreviation == "Washington") %>%
-  pull()
+  filter(Estimated.undergraduate.enrollment..total == max(Estimated.undergraduate.enrollment..total, na.rm = T)) %>%
+  select(State.abbreviation, Name, Estimated.undergraduate.enrollment..total)
 
-# Average total price for out-of-state student living on campus
-average_out_state <- college_admission_no_NA %>%
+# summary info 4: schools with highest in-state(on campus) expense in each state
+summary_info$max_SAT_rate <- college_admission_aggregated %>%
   group_by(State.abbreviation) %>%
-  summarise(
-    average_undergraduate = round(mean(Total.price.for.out.of.state.students.living.on.campus.2013.14), digits = 2)
-  )
-# Average total price for out-of-state student living on campus of Washington 
-wa_out_state <- average_out_state %>%
-  filter(State.abbreviation == "Washington") %>%
-  pull()
+  filter(Total.price.for.in.state.students.living.on.campus.2013.14 == max(Total.price.for.in.state.students.living.on.campus.2013.14, na.rm = T)) %>%
+  select(State.abbreviation, Name, Total.price.for.in.state.students.living.on.campus.2013.14)
 
-# summary_info.R 
-# A source file that takes in a dataset and returns a list of info about it:
-summary_info <- list()
-summary_info$num_observations <- nrow(my_dataframe)
-summary_info$some_max_value <- my_dataframe %>%
-  filter(some_var == max(some_var, na.rm = T)) %>%
-  select(some_label)
+# summary info 5: schools with highest out-of-state(on campus) expense in each state
+summary_info$max_out_state_tuition <- college_admission_aggregated %>%
+  group_by(State.abbreviation) %>%
+  filter(Total.price.for.out.of.state.students.living.on.campus.2013.14 == max(Total.price.for.out.of.state.students.living.on.campus.2013.14, na.rm = T)) %>%
+  select(State.abbreviation, Name, Total.price.for.out.of.state.students.living.on.campus.2013.14)
+
+print(summary_info)
+

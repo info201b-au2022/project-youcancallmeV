@@ -2,12 +2,11 @@
 
 In our project, we use the following data files and Application Programming Interfaces:
 
-## Data files (TODO: Update/delete for your PROJECT)
+## Data files
 |Data File Name | Brief Description|
 |---------------| -----------------|
-|[example.cvs](./example.csv) | This file contains temperature data. (See report for details.)
+|[College Admission](./College%20Admission.csv) | This is the main college admission data set we are going to be using for our project
 |[another-file](./filename2.csv) | Description ...
-|[collegeadmission](./College%20Admission.csv) | test
 
 ## Application Programming Interfaces (API) (TODO: Update/delete for your PROJECT)
 

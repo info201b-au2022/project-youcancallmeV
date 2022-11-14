@@ -22,4 +22,3 @@ college_admission_aggregated <- college_admission %>%
   )
 
 college_admission_no_NA <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
-# In our first chart, we will do a comparison between the admi

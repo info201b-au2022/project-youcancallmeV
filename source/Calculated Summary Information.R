@@ -3,7 +3,6 @@
 # The code for calculation are following
 
 library(dplyr)
-library(tidyverse)
 
 # Following is our date set named 'college_admission'
 college_admission <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv")
@@ -81,3 +80,11 @@ average_out_state <- college_admission_no_NA %>%
 wa_out_state <- average_out_state %>%
   filter(State.abbreviation == "Washington") %>%
   pull()
+
+# summary_info.R 
+# A source file that takes in a dataset and returns a list of info about it:
+summary_info <- list()
+summary_info$num_observations <- nrow(my_dataframe)
+summary_info$some_max_value <- my_dataframe %>%
+  filter(some_var == max(some_var, na.rm = T)) %>%
+  select(some_label)

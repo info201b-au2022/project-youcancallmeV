@@ -46,14 +46,14 @@ wa_estimate_undergraduate <- estimate_undergraduate %>%
   filter(State.abbreviation == "Washington") %>%
   pull()
 
-# Average percent of freshman submitted SAT/ACT scores
+# Average percent of freshman submitted SAT scores
 average_SAT_submit <- college_admission_no_NA %>%
   group_by(State.abbreviation) %>%
   summarise(
     average_submit_rate = round(mean(Percent.of.freshmen.submitting.SAT.scores), digits = 2)
   )
-# Average estimated undergraduate enrollment of Washington 
-wa_estimate_undergraduate <- estimate_undergraduate %>%
+# Average percent of freshman submitted SAT scores of Washington 
+wa_average_SAT_submit <- average_SAT_submit %>%
   filter(State.abbreviation == "Washington") %>%
   pull()
 
@@ -63,7 +63,7 @@ average_in_state <- college_admission_no_NA %>%
   summarise(
     average_undergraduate = round(mean(Total.price.for.in.state.students.living.on.campus.2013.14), digits = 2)
   )
-# Average estimated undergraduate enrollment of Washington 
+# Average total price for in-state student living on campus of Washington 
 wa_in_state <- average_in_state %>%
   filter(State.abbreviation == "Washington") %>%
   pull()
@@ -74,7 +74,7 @@ average_out_state <- college_admission_no_NA %>%
   summarise(
     average_undergraduate = round(mean(Total.price.for.out.of.state.students.living.on.campus.2013.14), digits = 2)
   )
-# Average estimated undergraduate enrollment of Washington 
+# Average total price for out-of-state student living on campus of Washington 
 wa_out_state <- average_out_state %>%
   filter(State.abbreviation == "Washington") %>%
   pull()

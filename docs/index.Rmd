@@ -52,6 +52,7 @@ source("../source/Chart #1.R")
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 Chart #2: Average university SAT submit rate of each state
+Chart 2 is a horizontal 
 ```{r, echo=FALSE}
 source("../source/Chart #2.R")
 ```

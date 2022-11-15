@@ -32,19 +32,13 @@ college_table <- college_admission_no_NA %>%
     average_expense_in_state = round(mean(Total.price.for.in.state.students.living.on.campus.2013.14), digits = 2),
     average_expense_out_state = round(mean(Total.price.for.out.of.state.students.living.on.campus.2013.14), digits = 2)
   ) %>%
-  arrange(-average_undergraduate)
+  arrange(-average_submit_rate)
 
 # Following code will compute the second chart, which includes the average SAT submission rate of each state  
-chart_2 <- ggplot(data = college_table) +
-  geom_point(mapping = aes(x = State.abbreviation, y = average_submit_rate), color = "black") +
+chart_2 <- ggplot(college_table, aes(x = reorder(State.abbreviation, -average_submit_rate), y = average_submit_rate)) + 
+  geom_bar(stat = "identity") +
   coord_flip()
 
 print(chart_2 + labs(
   title = "Chart #2 Average SAT submit rate of each state",
-  y = "Percentage", x = "States"
-))
-
-ggplot(data = college_table) +
-  geom_point(mapping = aes(x = State.abbreviation, y = average_submit_rate)) +
-  geom_smooth(mapping = aes(x = State.abbreviation, y = average_submit_rate)) +
-  coord_flip()
+  y = "Percentage", x = "States"))

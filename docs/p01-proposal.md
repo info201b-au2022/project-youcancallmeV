@@ -73,6 +73,18 @@ The followings are couple of limitations of our projects and database
   * This data is slightly out of date. The data was published on Kaggle approximately 4 years ago, meaning that it does not provide the most accurate information about current American colleges. Additionally, the intended user is likely to seek additional data regarding colleges that will affect their selections such as University ranking, availability of housing, etc. that our dataset does not provide.
   * Some of the data are not available which limits the amount of data as well as the reliability of the data set itself. For example, Athens State University does not have data on the number of applicants, admission total, acceptance rate, and more. This could be because the university itself is not sharing the information with the public. This can be difficult for students who may be seeking to apply to the university. Overcoming the inconsistencies in the data set is difficult but we could provide a link or a list of the university website or phone number so that it can be easier for the users to gain information.
 
+## Findings
+* How can we improve the data set?
+- There are various ways we can improve with the data set. One this we did was 
+* How do admissions for each American university relate the factor of the race of admitted students to the racial breakdown of the surrounding city's population?
+
+* How do regions relate to admitted rates?
+
+* What is the major concerns when one is choosing college? Is it location? tuition? Or something else.
+## Discussion
+
+## Conclusion
+
 ## Acknowledgements
 We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of inspiration on our project.
 

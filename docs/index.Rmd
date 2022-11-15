@@ -49,7 +49,11 @@ Chart #1:
 ```{r, echo=FALSE}
 source("../source/Chart #1.R")
 ```
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+Descriptive paragraph: 
+The purpose of chart 1 is to present the average expense for the out of state students in each state.
+This gives the students insights to how expensive it may cost to attend and live in each state, which could 
+give an idea to the students if they would like to apply the college/university based on their own economic status. 
 
 Chart #2: Average university SAT submit rate of each state
 ```{r, echo=FALSE}

@@ -9,11 +9,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, message = FALSE}
+source("../source/Calculated Summary information.R")
+
+```
+
 ## Project Dynamic
 
-* Please insert your dynamic paragraph here!!
+Using a compilation of data originating from a wide array of American colleges that was compiled by Samson Qian of MIT, we first arranged a table of specific data points by state, and locating the average values for each state's average undergraduate population, admission rate, SAT submission rate, and cost of both out-of-state and in-state attendance. The data averages vary wildly from state to state with `r summary_info$highest_average_undergraduate` having a significantly higher average undergraduate population than other states such as Alaska. Similarly, `r summary_info$highest_admit_rate` also eclipses Alaska in average admittance rate by double digit percentage points. Both of these could be due to the relatively low populations and amount of colleges located in these states. 
 
-
+After generating a table of averages, we created charts detailing a more precise examination of SAT scores and tuition rates. In contrast to the states with the highest admittance rates and undergraduate populations, the state with the highest average SAT scores of accepted students, `r summary_info$SAT_rate` is in a much denser population area, which may contribute to their position relative to other states on this particular data point. Similarly, the state with the highest average in-state tuition, `r summary_info$in_state_expense`, and highest average out-of-state tuition, also `r summary_info$out_state_expense`, is notable as a distinctly populous location, that also boasts a high rate or urbanization, as well as a higher population of citizens in a more affluent relative wealth bracket. 
 
 ## ACCESSING THE /source DIRECTORY
 ### Example 1: Source some code and run a function
@@ -49,7 +54,11 @@ Chart #1:
 ```{r, echo=FALSE}
 source("../source/Chart #1.R")
 ```
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+Descriptive paragraph: 
+The purpose of chart 1 is to present the average expense for the out of state students in each state.
+This gives the students insights to how expensive it may cost to attend and live in each state, which could 
+give an idea to the students if they would like to apply the college/university based on their own economic status. 
 
 Chart #2: Average university SAT submit rate of each state
 Chart 2 is a horizontal 

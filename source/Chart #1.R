@@ -35,7 +35,7 @@ college_table <- college_admission_no_NA %>%
   ) %>%
   arrange(-average_undergraduate)
 
-#Creates a graph that presents the State versus the total price for our of state students living on campus (2013)
+#Creates a graph that presents the State versus the average expense out of state (2013)
 chart_1 <- ggplot(data = college_table ) +
   geom_point(
     mapping = aes(x = State.abbreviation , y =average_expense_out_state),

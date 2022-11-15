@@ -30,6 +30,7 @@ college_admission_no_NA <- college_admission_aggregated[complete.cases(college_a
 #   3: Average percent of freshman submitted SAT scores of each state
 #   4: Average total price for in-state student living on campus of each state 
 #   5: Average total price for out-of-state student living on campus of each state 
+# Further, the data is stored in decending order based on the number of undergraduates
 college_table <- college_admission_no_NA %>%
   group_by(State.abbreviation) %>%
   summarise(
@@ -38,50 +39,41 @@ college_table <- college_admission_no_NA %>%
     average_submit_rate = round(mean(Percent.of.freshmen.submitting.SAT.scores), digits = 2),
     average_expense_in_state = round(mean(Total.price.for.in.state.students.living.on.campus.2013.14), digits = 2),
     average_expense_out_state = round(mean(Total.price.for.out.of.state.students.living.on.campus.2013.14), digits = 2)
-  )
-
-# The original data set have a lot confusing column names, changed for better understanding  
-colnames(college_table) <- c(
-  "State",
-  "Undergraduate Enrollment",
-  "Admit Rate (%)",
-  "SAT submit rate (%)", 
-  "On campus (in-state) total expense ($)", 
-  "On campus (out-of-state) total expense ($)"
-  )
+  ) %>%
+  arrange(-average_undergraduate)
 
 # Following will be the summary info of our calculation 
-summary_info <- list(college_table)
+summary_info <- list()
 summary_info$num_observations <- nrow(college_table)
 
 # State with highest average undergraduate enrollment
 summary_info$highest_average_undergraduate <- college_table %>%
-  filter(`Undergraduate Enrollment` == max(`Undergraduate Enrollment`, na.rm = T)) %>%
-  select(State) %>%
+  filter(average_undergraduate == max(average_undergraduate, na.rm = T)) %>%
+  select(State.abbreviation) %>%
   pull()
 
 # State with highest admit rate 
 summary_info$highest_admit_rate <- college_table %>%
-  filter(`Admit Rate (%)` == max(`Admit Rate (%)`, na.rm = T)) %>%
-  select(State) %>%
+  filter(average_admit == max(average_admit, na.rm = T)) %>%
+  select(State.abbreviation) %>%
   pull()
 
 # State with highest SAT submit rate 
 summary_info$SAT_rate <- college_table %>%
-  filter(`SAT submit rate (%)` == max(`SAT submit rate (%)`, na.rm = T)) %>%
-  select(State) %>%
+  filter(average_submit_rate == max(average_submit_rate, na.rm = T)) %>%
+  select(State.abbreviation) %>%
   pull()
 
 # State with highest in-state on campus expense
 summary_info$in_state_expense <- college_table %>%
-  filter( `On campus (in-state) total expense ($)` == max(`On campus (in-state) total expense ($)`, na.rm = T)) %>%
-  select(State) %>%
+  filter( average_expense_in_state == max(average_expense_in_state, na.rm = T)) %>%
+  select(State.abbreviation) %>%
   pull()
 
 # State with highest out-of-state on campus expense
 summary_info$out_state_expense <- college_table %>%
-  filter( `On campus (out-of-state) total expense ($)` == max(`On campus (out-of-state) total expense ($)`, na.rm = T)) %>%
-  select(State) %>%
+  filter( average_expense_out_state == max(average_expense_out_state, na.rm = T)) %>%
+  select(State.abbreviation) %>%
   pull()
 
 print_summary_info <- function(){

@@ -46,8 +46,8 @@ Following are the three charts we computed for our project:
 
 Chart #1: 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r, echo=FALSE}
+source("../source/Chart #1.R")
 ```
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 

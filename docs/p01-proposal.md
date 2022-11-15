@@ -39,7 +39,7 @@ In this project, we are concerned with the work load of incoming college student
 
 ## Research Questions
 * How can we improve the data set?
-  * This question is important because understanding the data is crucial when utilizing them for a purpose of our project. This enables us to think in-depth and critically, which helps to make a reliable and more powerful project. By improving the data set, we will be able to provide users with more accurate results that might potentially speed up their admission process. Additionally, simply utilizing a larger set of data will often allow for a greater scope of analysis, which would improve the quality and findings of our project.
+  * This question is important because understanding the data is crucial when utilizing them for a purpose of our project. This enables us to think in-depth and critically, which helps to make a reliable and more powerful project. By improving the data set, we will be able to provide users with more accurate results that might potentially speed up their admission process. Additionally, simply utilizing a larger set of data will often allow for a greater scope of analysis, which would greatly improve the quality and findings of our project.
 
 
 * How do admissions for each American university relate the factor of the race of admitted students to the racial breakdown of the surrounding city's population?

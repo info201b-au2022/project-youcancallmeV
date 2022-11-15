@@ -3,8 +3,6 @@
 # The code for the chart are following
 library(dplyr)
 library(tidyverse)
-install.packages("plotly")
-library(plotly)
 
 # Follow will be the same code get to our 
 college_admission <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv")
@@ -34,7 +32,7 @@ college_table <- college_admission_no_NA %>%
     average_expense_in_state = round(mean(Total.price.for.in.state.students.living.on.campus.2013.14), digits = 2),
     average_expense_out_state = round(mean(Total.price.for.out.of.state.students.living.on.campus.2013.14), digits = 2)
   ) %>%
-  arrange(-average_undergraduate)
+  arrange(-average_admit)
 
 # Following code will compute the second chart, which includes the average admission rate of each state  
 chart_3 <- ggplot(data = college_table, aes(x = State.abbreviation, y = average_admit)) +

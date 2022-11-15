@@ -75,16 +75,19 @@ The followings are couple of limitations of our projects and database
 
 ## Findings
 * How can we improve the data set?
-- There are various ways we can improve with the data set. One this we did was 
+- There are various ways we can improve with the data set. One thing we noticed in the data set was that there were a lot of NA (not available) values. Since we are calculating average, it would be very inconvenient if the school's data is not available. Thus, we excluded the schools that contained NA values in the columns that we desire. Second, we noticed that there were hundreds of different columns which was difficult to see. Thus, we extracted the ones we needed which included: Average undergraduate enrollment of each state, Average admit rate of each state, Average percent of freshman submitted SAT scores of each state, Average total price for in-state student living on campus of each state, Average total price for out-of-state student living on campus of each state. With this it is easier to see and will enable us to focus on a specific aspect of the dataset. This was helpful especially for our data set where there were too many values that could be meaningless depending on our research questions.
+
 * How do admissions for each American university relate the factor of the race of admitted students to the racial breakdown of the surrounding city's population?
 
 * How do regions relate to admitted rates?
 
 * What is the major concerns when one is choosing college? Is it location? tuition? Or something else.
+- One of the biggest concern is the cost of the whole process including cost of college, cost of living, and the cost to apply. This is because financial problem is something that is difficult to tackle. For example, the payment for the standardized SAT may be not easy for every group. This also includes the "location" of the college. I the college or university is close to your home, this may not be the problem but if the student is willing to go outside the state, the cost to move there, the cost of the dorms and the out of state tuition may be expensive which some student can not afford. Therefore, we have extracted the values of "Average total price for in-state student living on campus of each state" and the  Average total price for out-of-state student living on campus of each state".
+
 ## Discussion
-
+The importance of our findings will vary between different audiences. For example, with  
 ## Conclusion
-
+- data was too large. we did states but within states, each university is different so it may be too broad
 ## Acknowledgements
 We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of inspiration on our project.
 

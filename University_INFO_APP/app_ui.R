@@ -43,7 +43,7 @@ inter_one_text <- fluidPage(
 
 interactive_page_1 <- tabPanel(
   "Choropleth map",
-  h3("Interactive Visulization"),
+  h3("Interactive Visulization# 1"),
   inter_one_text)
 #----------------------------------------------------------------------------#
 

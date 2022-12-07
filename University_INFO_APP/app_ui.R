@@ -20,12 +20,30 @@ introductory_page <- tabPanel(
 # Interactive page 1(interactive_page_1), create by: Hanjiang Xu
 inter_one_text <- fluidPage(
   h3("headings"),
-  p("page content"),
-  textOutput(outputId = 'inter_one')
+  sidebarLayout(
+    sidebarPanel(
+      helpText("help text"),
+      
+      radioButtons(
+        inputId = "var",
+        label = "Variable selections:",
+        choices = c("State Average Admission Rate" = "average_admitted",
+                    "State Average SAT Submission Rate" = "average_SAT_sub",
+                    "State Average Enrollment " = "average_enroll",
+                    "State Average on Campus Living Price" = "average_p_on",
+                    "State Average off Campus Living Price" = "average_p_off"),
+        selected = "average_admitted"
+      )
+    ),
+    mainPanel(
+      h3("Annual emissions trends from 2001 to 2021"),
+      plotOutput("inter_one")
+    )
+  )
 )
 
 interactive_page_1 <- tabPanel(
-  "Visulization #1",
+  "Visualization #1",
   h3("some heading"),
   inter_one_text)
 #----------------------------------------------------------------------------#
@@ -39,7 +57,7 @@ inter_two_text <- fluidPage(
 )
 
 interactive_page_2 <- tabPanel(
-  "Visulization #2",
+  "Visualization #2",
   h3("some heading"),
   inter_two_text)
 #----------------------------------------------------------------------------#
@@ -52,7 +70,7 @@ inter_three_text <- fluidPage(
 )
 
 interactive_page_3 <- tabPanel(
-  "Visulization #3",
+  "Visualization #3",
   h3("some heading"),
   inter_three_text)
 #----------------------------------------------------------------------------#
@@ -65,19 +83,6 @@ summary_text <- fluidPage(
 )
 
 summary_page <- tabPanel(
-  "Summary takeaways",
-  h3("some heading"),
-  summary_text)
-#----------------------------------------------------------------------------#
-
-#----------------------------------------------------------------------------#
-# Summary page (interactive_page_3), create by:
-summary_text <- fluidPage(
-  h3("headings"),
-  p("page content")
-)
-
-interactive_page_3 <- tabPanel(
   "Summary takeaways",
   h3("some heading"),
   summary_text)

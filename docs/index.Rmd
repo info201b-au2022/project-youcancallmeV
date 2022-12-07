@@ -9,32 +9,34 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, message = FALSE, include= FALSE}
+source("../source/Calculated Summary information.R")
+
+```
+
 ## Project Dynamic
 
-* Please insert your dynamic paragraph here!!
+Using a compilation of data originating from a wide array of American colleges that was compiled by Samson Qian of MIT, we first arranged a table of specific data points by state, and locating the average values for each state's average undergraduate population, admission rate, SAT submission rate, and cost of both out-of-state and in-state attendance. The data averages vary wildly from state to state with `r summary_info$highest_average_undergraduate` having a significantly higher average undergraduate population than other states such as Alaska. Similarly, `r summary_info$highest_admit_rate` also eclipses Alaska in average admittance rate by double digit percentage points. Both of these could be due to the relatively low populations and amount of colleges located in these states.
 
+After generating a table of averages, we created charts detailing a more precise examination of SAT scores and tuition rates. In contrast to the states with the highest admittance rates and undergraduate populations, the state with the highest average SAT scores of accepted students, `r summary_info$SAT_rate` is in a much denser population area, which may contribute to their position relative to other states on this particular data point. Similarly, the state with the highest average in-state tuition, `r summary_info$in_state_expense`, and highest average out-of-state tuition, also `r summary_info$out_state_expense`, is notable as a distinctly populous location, that also boasts a high rate or urbanization, as well as a higher population of citizens in a more affluent relative wealth bracket.
 
+### Summary information
 
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r, message = FALSE}
+Following are summary information we calculated in the summary information about our data set.
+
+```{r, echo = FALSE, eval = TRUE, message = FALSE,}
 # Example 1: Note relative path, which can be read: Up one
 # directory(..), down into source (/source), and 
 # then "source" an R file (data_access.R)
 source("../source/Calculated Summary information.R")
+print_info
 summary_info
 ```
 
-### Example 2: Initialize a variable and then use it
-```{r, include=FALSE}
-# Example 1: This function was "sourced" above
-```
-
-> Hope you have a good day!! 
-
 ## Table
 
-In the following summary table, we include information including Average undergraduate enrollment, average admit rate, and average SAT submission rate of each state across the United States. The table is organized in descending order based on the average undergraduate enrollment, and it will only show the first ten states for this report. 
+In the following summary table, we included information regarding universities such as average undergraduate enrollment, average admit rate, and average SAT submission rate of each state across the United States. The table is organized in descending order based on the average undergraduate enrollment, and it will only show the first ten states for this report.
+
 ```{r ehco = FALSE, results='asis', message = FALSE, echo=FALSE}
 source("../source/Table of summary information.R")
 library(knitr)
@@ -42,21 +44,26 @@ kable(head(college_table_rename[1:4], n = 10), caption = "Basic informaion of Un
 ```
 
 ## Charts
-Following are the three charts we computed for our project: 
 
-Chart #1: 
+Following are the three charts we computed for our project:
+
+### Chart #1: Average living expense (for out-of-state students) 
+The purpose of chart 1 is to present the average expense for the out of state students in each state. This gives the students insights to how expensive it may cost to attend and live in each state, which could give an idea to the students if they would like to apply the college/university based on their own economic status.
 
 ```{r, echo=FALSE}
 source("../source/Chart #1.R")
 ```
 
-Descriptive paragraph: 
-The purpose of chart 1 is to present the average expense for the out of state students in each state.
-This gives the students insights to how expensive it may cost to attend and live in each state, which could 
-give an idea to the students if they would like to apply the college/university based on their own economic status. 
+### Chart #2: Average university SAT submit rate of each state 
+Chart 2 contains information regarding the SAT submission rate of each state. We believe it is important for students to know whether SAT scores are important to schools in their desired region of studying. As the graph displays, Wisconsin and South Dakota have a rather low rate of SAT submission compare with states such as California and New York. In this case, students who intend to study California/New York would put more effort into SAT testings.
 
-Chart #2: Average university SAT submit rate of each state
 ```{r, echo=FALSE}
 source("../source/Chart #2.R")
 ```
 
+### Chart #3: Average university admission rate of each state 
+Chart 3 contains information regarding average admission rate of each state. To potential college students, admission rate is a crucial value to take into consideration since it is directly associated with the students' future. It would be a unwise choice if students aim for colleges that have low admission rate. In the following graph, we can see that Wyoming universities have a surprisingly high admission rate. While comparing with the Chart 2, we can see that Wyoming also have a rather low SAT submission rate. The same phenomenon also apply to states like Wisconsin and South Dakota. In this case, we might be able to draw a correlation relationship between SAT submission rate and admission rate.
+
+```{r, echo=FALSE, message = FALSE}
+source("../source/Chart #3.R")
+```

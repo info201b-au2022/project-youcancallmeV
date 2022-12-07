@@ -76,8 +76,15 @@ summary_info$out_state_expense <- college_table %>%
   select(State.abbreviation) %>%
   pull()
 
-print_summary_info <- function(){
- t <- print(college_table)
- return(t)
-}
-
+print_info <- paste0("In our data set, there are ", summary_info$num_observations, " observations. ",
+                     "We have compute numbers such as average undergraduate enrollment, ", 
+                     "average admit rate, average SAT submission rate and etc. ",
+                     "For our summary, we inlcude the state with highest average in each category. ",
+                     "For example, the state with highest average undergraduate is ", 
+                     summary_info$highest_average_undergraduate, 
+                     ". The state with highest admission rate is ",
+                     summary_info$highest_admit_rate,
+                     ". The state with highest SAT submission rate is ",
+                     summary_info$SAT_rate,
+                     ". Finally, ", summary_info$in_state_expense, 
+                     " has both the highest average in-state and out-of-state on campus living expense.")

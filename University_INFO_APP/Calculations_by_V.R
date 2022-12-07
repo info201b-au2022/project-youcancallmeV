@@ -2,6 +2,7 @@ library(tidyverse)
 library(dplyr)
 # This is the calculation done by Hanjiang Xu to complete visualizations
 # Load the data for our project
+
 college_admission <- read.csv(
   "https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv",
   stringsAsFactors = FALSE)
@@ -18,11 +19,11 @@ college_admission_aggregated <- college_admission %>%
     Total.price.for.out.of.state.students.living.on.campus.2013.14
   )
 
-# ignore all the NA
+# ignore all the NA, this is the main data frame that we are going to use 
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
 
 #----------------------------------------------------------------------------#
-# calculations used for visualization 1 & 2 
+# This following section is calculations by V.
 df_inter_12 <- college_df
 df_inter_12$State.abbreviation <- tolower(df_inter_12$State.abbreviation)
 
@@ -32,17 +33,17 @@ colnames(df_inter_12) <- c("Name", "state", "Admission", "SAT", "Enrollment", "o
 # Calculate the average for each variable for all states
 df_inter <- df_inter_12 %>%
   group_by(state) %>%
-  summarise(
+  mutate(
     average_admitted = mean(Admission),
     average_SAT_sub = mean(SAT),
     average_enroll = mean(Enrollment),
     average_p_on = mean(on),
     average_p_off = mean(off)
-    )
+  ) 
 
 # get lat and lng of the states 
 df_map <- map_data("state") %>%
   group_by(region) %>%
   rename(state = region) %>%
   left_join(df_inter, by = "state")
-
+#----------------------------------------------------------------------------#

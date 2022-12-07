@@ -36,7 +36,7 @@ inter_one_text <- fluidPage(
       )
     ),
     mainPanel(
-      h3("Annual emissions trends from 2001 to 2021"),
+      h4("Map Visualization"),
       plotOutput("inter_one")
     )
   )
@@ -44,7 +44,7 @@ inter_one_text <- fluidPage(
 
 interactive_page_1 <- tabPanel(
   "Visualization #1",
-  h3("some heading"),
+  h3("Interactive Visulization"),
   inter_one_text)
 #----------------------------------------------------------------------------#
 

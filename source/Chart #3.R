@@ -43,3 +43,4 @@ chart_3 <- ggplot(data = college_table, aes(x = State.abbreviation, y = average_
   coord_flip()
 
 print(chart_3)
+

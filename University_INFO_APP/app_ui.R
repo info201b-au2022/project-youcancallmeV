@@ -19,11 +19,10 @@ introductory_page <- tabPanel(
 #----------------------------------------------------------------------------#
 # Interactive page 1(interactive_page_1), create by: Hanjiang Xu
 inter_one_text <- fluidPage(
-  h3("headings"),
   sidebarLayout(
     sidebarPanel(
-      helpText("help text"),
-      
+      helpText("This side panle provides five variables that could be displayed.
+               The variables are the following: "),
       radioButtons(
         inputId = "var",
         label = "Variable selections:",
@@ -36,14 +35,14 @@ inter_one_text <- fluidPage(
       )
     ),
     mainPanel(
-      h4("Map Visualization"),
-      plotOutput("inter_one")
+      plotOutput("inter_one"),
+      p("Analysis")
     )
   )
 )
 
 interactive_page_1 <- tabPanel(
-  "Visualization #1",
+  "Choropleth map",
   h3("Interactive Visulization"),
   inter_one_text)
 #----------------------------------------------------------------------------#

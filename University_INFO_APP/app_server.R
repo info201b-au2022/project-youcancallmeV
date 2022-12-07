@@ -48,7 +48,7 @@ server <- function(input, output){
     } else if(input$var == "average_enroll"){
       inter_1_map <- ggplot(df_map, aes(long, lat, group = group, fill = average_enroll)) +
         geom_polygon(color="grey") + 
-        scale_fill_continuous(low = "darkorchid1", high = "darkorchid4") +
+        scale_fill_continuous(low = "orchid1", high = "darkorchid4") +
         labs(title = "United States University/College Average Undergraduate Enrollment") + 
         theme_bw()
       print(inter_1_map)

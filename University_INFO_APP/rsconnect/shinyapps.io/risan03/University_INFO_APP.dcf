@@ -5,9 +5,9 @@ account: risan03
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7845640
-bundleId: 6612574
+bundleId: 6612793
 url: https://risan03.shinyapps.io/University_INFO_APP/
-when: 1670534473.82289
-lastSyncTime: 1670534473.8229
+when: 1670536998.76014
+lastSyncTime: 1670536998.76018
 asMultiple: FALSE
 asStatic: FALSE

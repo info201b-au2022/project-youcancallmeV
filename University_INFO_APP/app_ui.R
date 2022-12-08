@@ -155,18 +155,21 @@ summary_text <- fluidPage(
     we learned that there are so many schools, information which is difficult. Therefore, this teaches us that we should chose one or two 
     factors to focus on (e.g. geographical, economical, etc.) for application process."), 
   h2("Number Two"),
-  h4("There may be a relationship between admission rate and SAT submission rate!"), 
-  p("According to the second interactive visualization (the smooth line), there might be a slightly negative correlation between admission
-    rate and SAT submission rate. This could be a useful takeaway for students, where the graph indicats that schools that require SAT scores 
-    could be more competitive. "),
-  h2("Number Three"),
   h4("Affordable Cost of Attendance"),
-  p("As seen in the interaction visualization, cost really affects addmission rates and more. It is imporatant to look at 
+  p("As seen in the interaction visualization, cost really affects enrollments rates and more. It is imporatant to look at 
     how much tuition and fees will cost and whether there are different rates for in-state and out-of-state students. Through P1 to P3, we have also 
     found that there are a lot of students having financial aid opportunities and scholarships bringing tuition cost down to a reasonable level
     so there are solutions and good options students could consider!"),
+  h2("Number Three"),
+  h4("Admission rate and SAT submission rate!"), 
+  p("According to the second interactive visualization (the smooth line), there might be a slightly negative correlation between admission
+    rate and SAT submission rate. This could be a useful takeaway for students, where the graph indicats that schools that require SAT scores 
+    could be more competitive. "),
   h2("Number Four"),
-  p("whaaa"),
+  h4("Admission rate and Geographic locations"),
+  p("There is a relationship between the admission rate and it's geographical location From interaction visualization 2, we are able to see that
+    California has a low admission rate compared to other states. This could be because schools in that area is really popular (due to high quality education, 
+    climate, and the population) where there is an increase in the applications, making the acceptance rate significantly lower than other states. ")
 )
 
 summary_page <- tabPanel(

@@ -22,14 +22,36 @@ college_admission_aggregated <- college_admission %>%
 # ignore all the NA, this is the main data frame that we are going to use 
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
 
-# Source the calculations from V
-source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
-#source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
-#source("~/Documents/info201/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+# Calculations from V
+#----------------------------------------------------------------------------#
+# This following section is calculations by V.
+df_inter_12 <- college_df
+df_inter_12$State.abbreviation <- tolower(df_inter_12$State.abbreviation)
+
+# Change the column names for better understanding 
+colnames(df_inter_12) <- c("Name", "state", "Admission", "SAT", "Enrollment", "on", "precent")
+
+# Calculate the average for each variable for all states
+df_inter <- df_inter_12 %>%
+  group_by(state) %>%
+  mutate(
+    average_admitted = mean(Admission),
+    average_SAT_sub = mean(SAT),
+    average_enroll = mean(Enrollment),
+    average_p_on = mean(on),
+    average_w_p = mean(precent)
+  ) 
+# get lat and lng of the states 
+df_map <- map_data("state") %>%
+  group_by(region) %>%
+  rename(state = region) %>%
+  left_join(df_inter, by = "state")
+#----------------------------------------------------------------------------#
+
+
 #----------------------------------------------------------------------------#
 # Following is the server function 
 server <- function(input, output){
-
   #----------------------------------------------------------------------------#
   # renders for interactive page 1, created by: Hanjiang Xu (V)
   output$inter_one <- renderPlot({

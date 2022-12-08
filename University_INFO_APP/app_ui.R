@@ -96,13 +96,12 @@ interactive_page_2 <- tabPanel(
 inter_three_text <- fluidPage(
   sidebarLayout(
     sidebarPanel(
-      helpText("This side panle provides the selection of four pairs correlations 
-               that coule be displayed"),
+      helpText("Choose a Statistical Category to Examine on a State-by-state Basis"),
       selectInput(
         inputId = "table",
         label = "Correlations selections: Admission Rate vs.",
         choices = c("SAT Submission Rate" = "average_SAT_sub",
-                    "Tuition Rate" = "average_cost",
+                    "Enrollment" = "average_enrollment",
                     "Admission Rate" = "average_admission"),
         selected = "average_SAT_sub"
       )
@@ -111,12 +110,8 @@ inter_three_text <- fluidPage(
       plotOutput("inter_three"),
       strong("Analysis:"),
       br(),
-      p("This visualization displays a scatter plot with a smooth line that shows 
-        the correlation between variables. Each selection in the left side panle 
-        will give a different correlation polt between variables. For example, 
-        the smooth line shows that there might be a slightly negative correlation 
-        between admission rate and SAT submission rate. This is a understandable 
-        prediction since schools that require SAT scores are usually more competetive.")
+      p("This visualization shows different statistical catergories on a state-by-state basis, allowing the user to closely
+        examine the potential correlations, or non-correlations between the categories of their choosing.")
     )
   )
 )
@@ -124,7 +119,7 @@ inter_three_text <- fluidPage(
 
 interactive_page_3 <- tabPanel(
   "State by State Analysis",
-  h3("Intereactive Visualization #3"),
+  h3("Interactive Visualization #3"),
   inter_three_text)
 #----------------------------------------------------------------------------#
 

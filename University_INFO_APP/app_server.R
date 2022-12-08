@@ -113,35 +113,40 @@ server <- function(input, output){
   # renders for interactive page 3, created by: Jett Chang-Lam
   output$inter_three <- renderPlot({
     if(input$table == "average_SAT_sub"){
-      inter_3_table <- ggplot(df_inter_12, aes(x = reorder(state, -SAT), y = SAT)) + 
-        geom_bar(stat = "identity") +
-        labs(
-          title = "Chart #3 Average admission rate of each state",
-          y = "Percentage", x = "States") +
-        coord_flip()
-      print(inter_3_table)
-    } else if(input$table == "average_cost"){
-      inter_3_table <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = Enrollment)) +
-        geom_point(color = "darkorange1") + 
-        geom_smooth(color = "darkorange4") + 
-        labs(title = "Correlation between admission rate and undergraduate enrollment",
-             x = "Admission Rate (%)",
-             y = "Undergraduate Enrollment")
-      print(inter_3_table)
-    } else if(input$table == "average_p_on"){
       inter_3_table <- ggplot(data = df_inter_12 ) +
         geom_point(
-          mapping = aes(x = state , y = average_expense_out_state),
+          mapping = aes(x = state , y = SAT),
           color = "blue",
           alpha = .3
-        ) + coord_flip()
+        ) + 
+        labs(
+          title = "SAT submission rates of each state",
+          y = "Percentage", x = "State") +
+        coord_flip()
+      print(inter_3_table)
+    } else if(input$table == "average_enrollment"){
+      inter_3_table <- ggplot(data = df_inter_12 ) +
+        geom_point(
+          mapping = aes(x = state , y = Enrollment),
+          color = "blue",
+          alpha = .3
+        ) + 
+        labs(
+          title = "Student body sizes rates of each state",
+          y = "Enrollment", x = "State") +
+        coord_flip()
       print(inter_3_table)
     } else if(input$table == "average_admission"){
       inter_3_table <- ggplot(data = df_inter_12, aes(x = state, y = Admission)) +
-        geom_col() +
+        geom_point(
+          mapping = aes(x = state , y = Admission),
+          color = "blue",
+          alpha = .3
+        ) +
         labs(
-          title = "Chart #3 Average admission rate of each state",
-          y = "Percentage", x = "States") +
+          title = "Admission rates of each state",
+          y = "Admission Percentage", x = "State") +
+        scale_size(range = c(0, 100)) +
         coord_flip()
       print(inter_3_table)
     }

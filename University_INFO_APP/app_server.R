@@ -23,8 +23,8 @@ college_admission_aggregated <- college_admission %>%
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
 
 # Source the calculations from V
-#source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
-source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+#source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 #----------------------------------------------------------------------------#
 # Following is the server function 
 server <- function(input, output){
@@ -112,7 +112,7 @@ server <- function(input, output){
   # renders for interactive page 3, created by: Jett Chang-Lam
   output$inter_three <- renderPlot({
     if(input$table == "average_SAT_sub"){
-      inter_3_table <- ggplot(df_inter_12, aes(x = reorder(state, -average_submit_rate), y = average_submit_rate)) + 
+      inter_3_table <- ggplot(df_inter_12, aes(x = reorder(state, -SAT), y = SAT)) + 
         geom_bar(stat = "identity") +
         labs(
           title = "Chart #3 Average admission rate of each state",
@@ -136,7 +136,7 @@ server <- function(input, output){
         ) + coord_flip()
       print(inter_3_table)
     } else if(input$table == "average_w_p"){
-      inter_3_table <- ggplot(data = df_inter_12, aes(x = state, y = average_admit)) +
+      inter_3_table <- ggplot(data = df_inter_12, aes(x = state, y = Admission)) +
         geom_col() +
         labs(
           title = "Chart #3 Average admission rate of each state",

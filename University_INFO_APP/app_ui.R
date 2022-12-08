@@ -101,7 +101,6 @@ inter_three_text <- fluidPage(
         inputId = "table",
         label = "Correlations selections: Admission Rate vs.",
         choices = c("SAT Submission Rate" = "average_SAT_sub",
-                    "Enrollment " = "average_enroll",
                     "Campus Living Expenses" = "average_p_on",
                     "White Students Precentage" = "average_w_p"),
         selected = "average_SAT_sub"

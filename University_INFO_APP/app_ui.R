@@ -146,9 +146,9 @@ report_text <- fluidPage(
     "Sleep, Zebra, Sleep"),
   
   h3("Authors💻"),
-  p("Hanjiang Xu xhj1026@uw.edu"),
-  p("Risa Nabari risan03@uw.edu"),
-  p("Jett Chang-Lam jcl9292@uw.edu"),
+  p("Hanjiang Xu (xhj1026@uw.edu)"),
+  p("Risa Nabari (risan03@uw.edu)"),
+  p("Jett Chang-Lam (jcl9292@uw.edu)"),
   
   h3("Affiliation 🏫"),
   p("INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
@@ -185,7 +185,7 @@ report_text <- fluidPage(
   ". Our data and visualization would provide students with useful information that eases their pressure 
   on searching for the best college for each individual. The indirect stakeholder of the project would be 
   college promotion departments. By having more exposure from the website, colleges that are less well known 
-  yet obtain desirable characteristics will be exposed more to potential students ."), 
+  yet obtain desirable characteristics will be exposed more to potential students."), 
   h4(em("Human Values")),
   p("Human values such as", 
     strong("inclusion, accessibility"),
@@ -229,7 +229,7 @@ report_text <- fluidPage(
     what might be some correlation factors that caused the difference in admission rate. For example, we plan to examine the SAT submission rate 
     of each region. In this case, SAT submission rate might become a mediating variable that directs the relationship between admission rate and 
     geographic locations of each state."),
-  hr(em("What is the major concerns when one is choosing college? Is it location? tuition? Or something else.")),
+  h4(em("What is the major concerns when one is choosing college? Is it location? tuition? Or something else.")),
   p("This is an very important question because by discussing it, we will be able to find the general pattern of college choosing. 
     We will be able to figure out the general pattern behind the college admission process and determine what is the top priority of people.
     For example, some people might value college ranking and some might prioritize tuition. As those who are choosing a college to enroll in are
@@ -265,9 +265,8 @@ report_text <- fluidPage(
   h5("4.We obtained our data set on the internet by searching public data on admission information regarding universities across the United States."),
   
   p("(Table 1. Summary of Dataset)"),
-  p("| Title | Number of Variables | Number of observations | Citation/URLs |
-| ------------- | -------------  | ------------- |  ------------- |
-|College Admissions | 108 | 1,534 | College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions |"),
+  
+  imageOutput("home_img"),
   
   h3("Expected Limitations"),
   p("The following are some implications of our project:"),

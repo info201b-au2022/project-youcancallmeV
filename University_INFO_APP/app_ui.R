@@ -27,11 +27,10 @@ intro_text <- fluidPage(
     biases that may exist among higher education within the United States, as ultimately, these prospective students will be the ones making a selection of which university to attend. 
     With that in mind however, our team has found that there is no significant correlation between the results of university application and acceptance policy, and the state that the 
     individual universities are located in. The data shows a varience between each state, but none notable enough to definitively conclude that individual states have policies 
-    that are the driving factor behind acceptance rates, "),
+    that are the driving factor behind acceptance rates, nor is there notable enough results to conclude a correlation between admission rates and 
+    various statistics such as total enrollment, SAT submission rate, or yearly tuition."),
   br(),
   br(),
-  strong("What are the key findings?"),
-  p(""),
   img(src='cherry2k.jpg', align = "center", width = "100%", height = "100%")
 )
 

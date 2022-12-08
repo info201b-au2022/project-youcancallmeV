@@ -7,22 +7,20 @@ library(plotly)
 # Introductory page(introductory_page), create by: Jett
 intro_text <- fluidPage(
   h3("Examining the Potential Biases of the American College"),
-  p("The college application process can be frustrating. Getting information on 
-    colleges and universities, looking for financial aid, looking for the desired 
-    degree, as well as balancing school life is usually extremely challenging. 
-    To help the users experiencing difficulties, our project enables students to 
-    search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) 
-    on a university. Our project plans to help the users to save time as all the 
-    information is in one place which makes the overall research process of the 
-    university faster and more efficient. For our project, we plan to have a search 
-    bar where users can search for information regarding a specific university. 
-    Moreover, we plan to design a filter function that allows users to select colleges 
-    that has specific characteristics. For example, users would be able to select 
-    colleges that give student loan aid to first-year students, colleges that have 
-    a high percentage of a certain race, and moreover."),
-  br(),
-  strong("What is the problem domain?"),
-  p(""),
+  p("The college application process can be frustrating.
+    Getting information on colleges and universities, looking for 
+    financial aid, looking for the desired degree, as well as balancing 
+    school life is usually extremely challenging. What's more, the selection process 
+    that colleges go through has been faced with increasing scrutiny in the current times, causing many 
+    prospective college student to have a want or need examine the results of how colleges from different areas 
+    run their acceptance process. To help the users that are 
+    experiencing difficulties understanding such a complex topic, our project enables students to quickly gain an understanding of multiple statistical categories 
+    (e.g. total number of enrollments, ACT/SAT scores, tuition) 
+    on universities, as well as compare that data on a state-by-state basis. Our project helps the users to save time as all 
+    the information is in one place which makes the overall research process of understanding the 
+    statistical values that may expose certain places as areas of bias and predjudice quickly and efficiently. Additionally, this project was 
+    made in such a data-centric display that allows the viewer to come to their own conclusions regarding the potential
+    biases that may exist among higher education within the United States, as ultimately, these prospective students will be the ones making a selection of which university to attend."),
   br(),
   strong("What are the research questions?"),
   p(""),

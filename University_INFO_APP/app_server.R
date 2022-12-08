@@ -23,7 +23,7 @@ college_admission_aggregated <- college_admission %>%
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
 
 # Source the calculations from V
-#source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 #source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 #source("~/Documents/info201/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 #----------------------------------------------------------------------------#
@@ -150,8 +150,8 @@ server <- function(input, output){
         coord_flip()
       print(inter_3_table)
     }
-    
   })
+  
 }
 
 server <- function(input, output){
@@ -164,5 +164,15 @@ server <- function(input, output){
   }, deleteFile = FALSE)
 }
 
-
+inter_3_table <- ggplot(data = df_inter_12 ) +
+  geom_point(
+    mapping = aes(x = state , y = SAT),
+    color = "blue",
+    alpha = .3
+  ) + 
+  labs(
+    title = "SAT submission rates of each state",
+    y = "Percentage", x = "State") +
+  coord_flip()
+print(inter_3_table)
   

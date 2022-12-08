@@ -7,8 +7,33 @@ library(plotly)
 # Introductory page(introductory_page), create by: Jett
 intro_text <- fluidPage(
   h3("Examining the Potential Biases of the American College"),
-  p("The college application process can be frustrating. Getting information on colleges and universities, looking for financial aid, looking for the desired degree, as well as balancing school life is usually extremely challenging. To help the users experiencing difficulties, our project enables students to search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) on a university. Our project plans to help the users to save time as all the information is in one place which makes the overall research process of the university faster and more efficient. For our project, we plan to have a search bar where users can search for information regarding a specific university. Moreover, we plan to design a filter function that allows users to select colleges that has specific characteristics. For example, users would be able to select colleges that give student loan aid to first-year students, colleges that have a high percentage of a certain race, and moreover.")
+  p("The college application process can be frustrating. Getting information on 
+    colleges and universities, looking for financial aid, looking for the desired 
+    degree, as well as balancing school life is usually extremely challenging. 
+    To help the users experiencing difficulties, our project enables students to 
+    search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) 
+    on a university. Our project plans to help the users to save time as all the 
+    information is in one place which makes the overall research process of the 
+    university faster and more efficient. For our project, we plan to have a search 
+    bar where users can search for information regarding a specific university. 
+    Moreover, we plan to design a filter function that allows users to select colleges 
+    that has specific characteristics. For example, users would be able to select 
+    colleges that give student loan aid to first-year students, colleges that have 
+    a high percentage of a certain race, and moreover."),
+  br(),
+  strong("What is the problem domain?"),
+  p(""),
+  br(),
+  strong("What are the research questions?"),
+  p(""),
+  br(),
+  strong("What data was analyzed?"),
+  p(""),
+  br(),
+  strong("What are the key findings?"),
+  p("")
 )
+
 
 introductory_page <- tabPanel(
   "Introduction",

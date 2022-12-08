@@ -158,8 +158,8 @@ server <- function(input, output){
   output$home_img <- renderImage({
     
     list(src = "www/table_img.png",
-         width = 150,
-         height = 10)
+         width = "70%",
+         height = "70%")
     
   }, deleteFile = FALSE)
 }

@@ -200,8 +200,7 @@ report_text <- fluidPage(
   p("In this project, we are concerned with whether potential college students have an efficient way of selecting 
   a suitable college in the United States. Because there are so many colleges and universities in America, it becomes 
   complicated when doing research. To address this concern, we plan to design a simple tool that allows users to select colleges 
-  (colleges/universities included in our database) based on different characteristics (e.g. SAT scores, race population percentage, 
-  undergraduate enrollment, etc.))"), 
+  (colleges/universities included in our database) based on different characteristics (e.g. SAT scores, admission rate, enrollment rate, etc.))"), 
   
   h3("Keywords"),
   p("Education; College Admission; Standarized Test Scores; Acceptance rate; Enrollment"),
@@ -215,8 +214,7 @@ report_text <- fluidPage(
     process of the university faster and more efficient. For our project, we plan to have a search bar where users 
     can search for information regarding a specific university. Moreover, we plan to design a filter function that 
     allows users to select colleges that has specific characteristics. For example, users would be able to select 
-    colleges that give student loan aid to first-year students, colleges that have a high percentage of a certain 
-    race, and moreover."),
+    colleges that give student loan aid to first-year students, admission rate, and moreover."),
   
   h3("Problem Domain"),
   p("In this project, we are concerned with the work load of incoming college students through 
@@ -337,21 +335,25 @@ report_text <- fluidPage(
   
   h3("Findings"),
   strong("How can we improve the data set?"), 
-  p("  - There are various ways we can improve with the data set. One thing we noticed in the data set was that there were a lot of NA 
-  (not available) values. Since we are calculating average, it would be very inconvenient if the school's data is not available. Thus, 
-  we excluded the schools that contained NA values in the columns that we desire. Second, we noticed that there were hundreds of different 
-  columns which was difficult to see. Thus, we extracted the ones we needed which included: Average undergraduate enrollment of each state, 
-  Average admit rate of each state, Average percent of freshman submitted SAT scores of each state, Average total price for in-state student 
-  living on campus of each state, Average total price for out-of-state student living on campus of each state. With this it is easier to see 
-  and will enable us to focus on a specific aspect of the dataset. This was helpful especially for our data set where there were too many values 
-  that could be meaningless depending on our research questions."),
-  strong("How do admissions for each American university relate the factor of the race of admitted students to the racial breakdown 
-  of the surrounding city's population?"),
-  p("* How do regions relate to admitted rates?"), 
+  p("  -We noticed in the data set was that there were a lot of NA (not available) values. Since we are calculating average, 
+  it would be very inconvenient if the school's data is not available. Thus, we excluded the schools that contained NA values in the 
+  columns that we desire. Second, we noticed that there were hundreds of different columns which was difficult to see. Thus, 
+  we extracted the ones we needed which included: Average undergraduate enrollment of each state, Average admit rate of each state, 
+  Average percent of freshman submitted SAT scores of each state, Average total price for in-state studentliving on campus of each state, 
+  Average total price for out-of-state student living on campus of each state. With this it is easier to see and will enable us to 
+  focus on a specific aspect of the dataset. This was helpful especially for our data set where there were too many values that could be meaningless depending on our research questions."),
+  strong("How do admissions for each state relate to their geographic locations?"), 
+ p("- We have figured this question out through interactive vizualiation with the choropleth map. From looking at the map (the 
+   lighter the color, the lower the admission rate), we noticed that California especially had a low acceptance rate. This is understandable as
+   California is a most overcrowded place on the states and a lot of the UC has high quality education and the climate in California is nice where it 
+   is warm where having a lot of opportunities to have fun with friends. Thus, this makes the number of applications increase, whcih 
+   decreases the admission rate. In addition, we can see that the middle of the United States has a higher admission rate and east/south coast of the 
+   United States also have a lower admission rate. Overall, we could say that the coast side has a lower accpetance rate than other states. This could
+   be because there are more opportunities and nicer climate (near the beach.)"), 
   strong("What is the major concerns when one is choosing college? Is it location? tuition? Or something else."), 
-  p(" - One of the biggest concern is the cost of the whole process including tuition of college, cost of living especially for 
+  p(" - One of the biggest concern is the cost of the whole process including tuition of college, cost of living especially for
     out-of-state students), and the cost to apply. This is because financial problem is something that is difficult to tackle. For example, 
-    the payment for the standardized SAT may be not easy for every group. This also includes the location of the college. I the college or 
+    the payment for the standardized SAT may be not easy for every group. This also includes the location of the college. The college or 
     university is close to your home, this may not be the problem but if the student is willing to go outside the state, the cost to move there, 
     the cost of the dorms and the out of state tuition may be expensive which some student can not afford. Therefore, we have extracted the values 
     of",
@@ -360,31 +362,35 @@ report_text <- fluidPage(
     strong("Average total price for out-of-state student living on campus of each state.")), 
     
   h3("Discussion"),
-  p("The importance of our findings will vary between different audiences. First, for the summary table, we included information of 
-  Average undergraduate enrollment, average admit rate, and average SAT submission rate of each state across the United States. The table is 
-  organized in descending order based on the average undergraduate enrollment, and it will only show the first ten states for this report. 
+  p("When making the interactive visualization, we have specifically chopsen the data on 
+  Average undergraduate enrollment, average admit rate, and average SAT submission rate of each state across the United States. 
   These findings were really important to the students planning to apply to a college/university and parents or members who will be paying 
   for the tuition or the application fee depending on the states. For the students, it is important to understand the average admission rate 
-  because it will allow them chose safety as well as reach schools easily, which helps them to plan well ahead. In addition, average SAT 
-  submission rate may also be helpful because it will give an insight if the student will need to submit the SAT and if the students is not 
+  because it will allow them chose safety as well as reach schools easily, which helps them to plan well ahead. In addition, we made it easier for the 
+  users to understand the information by having a choropleth map which allows them to see differences in each state only by the difference in colors. 
+  In addition, average SAT submission rate may also be helpful because it will give an insight if the student will need to submit the SAT and if the students is not 
   satisfied with the result of the SAT, they could have a plan to apply to a place that does not have a high SAT submission rate. For example, 
-  looking at the chart 2, we can see that New Jersey and Delaware has a high average SAT submission rate which gives an insight that schools in 
-  those places may require SAT scores compared to other states. Therefore, through these information and the chart which shows the data 
-  visualization, audience are able to research the efficient way of selecting a suitable college in the United States."), 
+  looking at the interactive visualization for SAT submission rate, we can see that the south and east coast of the United States have higher submission 
+  rate compared other states which gives an insight that schools in those places may require SAT scores compared to other states. We have also noticed that
+  there may be a relationship between submission rate and admission rate. For example, California has a higher rate of submission rate and lower admission rate, and the
+  middle states (states not in the coast side) had low SAT submission  rate and higher admission rate which could indicate that there is a negative
+  correlation between than which makes sense as schools in California is more competitive so they may require SAT submission to differentiate applicants 
+  in various ways. Therefore, through these information and the chart which shows the data visualization, audience are able to research the 
+    efficient way of selecting a suitable college in the United States."), 
   h3("Conclusion"),
   p("Our main focus was to find an efficient way of selecting a suitable college in the United States. To address this concern, we designed 
-    a simple tool that allows users to select colleges (colleges/universities included in our database) based on different characteristics. 
-    This includes the average undergraduate enrollment, average admit rate, and average SAT submission rate of each state across the United 
-    States. One limitation in our findings is that the data set was too large and we took the values for each state but within each state, 
-    there are a lot of schools. In addition, even though our project provides the basic details of institutions, it did not include some key 
-    information such as the application deadline. We believe it is important for potential college students to know their deadlines yet our 
-    database does not include this information. Thus, we would like the audience to use our tool to have a broad idea for each of the data. 
-    From there, we would recommend more detailed research on the college/university application. If we were to do another project based on the 
-    same project, we would like to use more datasets to increase reliability as this data set is slightly out of date. Specifically, through our 
-    research, we found that there might be an issue with the credibility of this database. Our data set was collected on Kaggle, and posted by 
+    a simple application that allows users to select colleges (colleges/universities included in our database) based on different characteristics.
+    We made a filter function (using the widgets on Shiny) which allows us to select State Average Admission Rate, State Average SAT Submission Rate, 
+    State Average Enrollment, State Average on Campus Living Expenses, and State Average White Students Precentage. We have specifically focused on 
+    these information as we thought this was the most relevant and useful information when doing a research on University/College application as it 
+    includes information on academics, economic, and the geographical location. In addition, even though our project provides the basic details of 
+    institutions, it did not include some key information such as the application deadline. We believe it is important for potential college students to know their deadlines yet our 
+    database does not include this information. If there is an opportunity to do the same project,
+    we would like to use more datasets to increase reliability as this data set is slightly out of date. Our data set was collected on Kaggle, and posted by 
     Samson Qian, but the author did not provide information on where he got the data. However, overall, I believe it gave a lot of helpful insights 
-    for finding an efficient way of selecting a suitable college which has a lot of potential. For further research, it would be also interesting 
-    if we look at the population and the percentage of race to understand he racial breakdown of the surrounding city's population."),
+    for finding an efficient way of selecting a suitable college which has a lot of potential. Overall, we hope this application can help 
+    students who are stuck on University/College research to use our tool to have a broad idea for each of the data. From there, we would recommend more detailed 
+    research on their intended schools."),
   p("Through the interactive charts, we can also conclude that......"), 
   h3("Acknowledgements"),
   p("We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of 

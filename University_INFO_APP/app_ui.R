@@ -28,7 +28,8 @@ intro_text <- fluidPage(
   br(),
   br(),
   strong("What are the key findings?"),
-  p("")
+  p(""),
+  img(src='cherry2k.jpg', align = "center", width = "100%", height = "100%")
 )
 
 

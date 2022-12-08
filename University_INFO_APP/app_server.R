@@ -23,8 +23,8 @@ college_admission_aggregated <- college_admission %>%
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
 
 # Source the calculations from V
-source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
-#source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+#source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 #----------------------------------------------------------------------------#
 # Following is the server function 
 server <- function(input, output){
@@ -119,7 +119,7 @@ server <- function(input, output){
           y = "Percentage", x = "States") +
         coord_flip()
       print(inter_3_table)
-    } else if(input$table == "average_enroll"){
+    } else if(input$table == "average_cost"){
       inter_3_table <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = Enrollment)) +
         geom_point(color = "darkorange1") + 
         geom_smooth(color = "darkorange4") + 
@@ -135,7 +135,7 @@ server <- function(input, output){
           alpha = .3
         ) + coord_flip()
       print(inter_3_table)
-    } else if(input$table == "average_w_p"){
+    } else if(input$table == "average_admission"){
       inter_3_table <- ggplot(data = df_inter_12, aes(x = state, y = Admission)) +
         geom_col() +
         labs(

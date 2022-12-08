@@ -101,8 +101,8 @@ inter_three_text <- fluidPage(
         inputId = "table",
         label = "Correlations selections: Admission Rate vs.",
         choices = c("SAT Submission Rate" = "average_SAT_sub",
-                    "Campus Living Expenses" = "average_p_on",
-                    "White Students Precentage" = "average_w_p"),
+                    "Tuition Rate" = "average_cost",
+                    "Admission Rate" = "average_admission"),
         selected = "average_SAT_sub"
       )
     ),
@@ -123,7 +123,7 @@ inter_three_text <- fluidPage(
 
 interactive_page_3 <- tabPanel(
   "State by State Analysis",
-  h3("some heading"),
+  h3("Intereactive Visualization #3"),
   inter_three_text)
 #----------------------------------------------------------------------------#
 

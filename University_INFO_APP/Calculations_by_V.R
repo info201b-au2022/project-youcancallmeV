@@ -2,7 +2,6 @@ library(tidyverse)
 library(dplyr)
 # This is the calculation done by Hanjiang Xu to complete visualizations
 # Load the data for our project
-
 college_admission <- read.csv(
   "https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv",
   stringsAsFactors = FALSE)

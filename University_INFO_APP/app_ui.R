@@ -4,15 +4,15 @@ library(plotly)
 # This is the main ui page for our app. Please put your work in desired sections.
 
 #----------------------------------------------------------------------------#
-# Introductory page(introductory_page), create by: name
+# Introductory page(introductory_page), create by: Jett
 intro_text <- fluidPage(
-  h3("headings"),
-  p("page content")
+  h3("Examining the Potential Biases of the American College"),
+  p("The college application process can be frustrating. Getting information on colleges and universities, looking for financial aid, looking for the desired degree, as well as balancing school life is usually extremely challenging. To help the users experiencing difficulties, our project enables students to search for specific data (e.g. total number of enrollments, ACT/SAT scores, tuition) on a university. Our project plans to help the users to save time as all the information is in one place which makes the overall research process of the university faster and more efficient. For our project, we plan to have a search bar where users can search for information regarding a specific university. Moreover, we plan to design a filter function that allows users to select colleges that has specific characteristics. For example, users would be able to select colleges that give student loan aid to first-year students, colleges that have a high percentage of a certain race, and moreover.")
 )
 
 introductory_page <- tabPanel(
   "Introduction",
-  h3("some heading"),
+  h3("Do US Colleges Operate with Predjudice?"),
   intro_text)
 #----------------------------------------------------------------------------#
 
@@ -93,12 +93,37 @@ interactive_page_2 <- tabPanel(
 #----------------------------------------------------------------------------#
 # Interactive page 3(interactive_page_3), create by:
 inter_three_text <- fluidPage(
-  h3("headings"),
-  p("page content")
+  sidebarLayout(
+    sidebarPanel(
+      helpText("This side panle provides the selection of four pairs correlations 
+               that coule be displayed"),
+      selectInput(
+        inputId = "table",
+        label = "Correlations selections: Admission Rate vs.",
+        choices = c("SAT Submission Rate" = "average_SAT_sub",
+                    "Enrollment " = "average_enroll",
+                    "Campus Living Expenses" = "average_p_on",
+                    "White Students Precentage" = "average_w_p"),
+        selected = "average_SAT_sub"
+      )
+    ),
+    mainPanel(
+      plotOutput("inter_three"),
+      strong("Analysis:"),
+      br(),
+      p("This visualization displays a scatter plot with a smooth line that shows 
+        the correlation between variables. Each selection in the left side panle 
+        will give a different correlation polt between variables. For example, 
+        the smooth line shows that there might be a slightly negative correlation 
+        between admission rate and SAT submission rate. This is a understandable 
+        prediction since schools that require SAT scores are usually more competetive.")
+    )
+  )
 )
 
+
 interactive_page_3 <- tabPanel(
-  "Visualization #3",
+  "State by State Analysis",
   h3("some heading"),
   inter_three_text)
 #----------------------------------------------------------------------------#
@@ -140,3 +165,4 @@ ui <- navbarPage(
   summary_page,
   report_page
 )
+

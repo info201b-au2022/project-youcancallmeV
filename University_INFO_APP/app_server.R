@@ -23,12 +23,12 @@ college_admission_aggregated <- college_admission %>%
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
 
 # Source the calculations from V
-source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
-
+#source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 #----------------------------------------------------------------------------#
 # Following is the server function 
 server <- function(input, output){
-  
+
   #----------------------------------------------------------------------------#
   # renders for interactive page 1, created by: Hanjiang Xu (V)
   output$inter_one <- renderPlot({
@@ -109,5 +109,43 @@ server <- function(input, output){
 
   })
   #----------------------------------------------------------------------------#
-  
+  # renders for interactive page 3, created by: Jett Chang-Lam
+  output$inter_three <- renderPlot({
+    if(input$table == "average_SAT_sub"){
+      inter_3_table <- ggplot(df_inter_12, aes(x = reorder(state, -average_submit_rate), y = average_submit_rate)) + 
+        geom_bar(stat = "identity") +
+        labs(
+          title = "Chart #3 Average admission rate of each state",
+          y = "Percentage", x = "States") +
+        coord_flip()
+      print(inter_3_table)
+    } else if(input$table == "average_enroll"){
+      inter_3_table <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = Enrollment)) +
+        geom_point(color = "darkorange1") + 
+        geom_smooth(color = "darkorange4") + 
+        labs(title = "Correlation between admission rate and undergraduate enrollment",
+             x = "Admission Rate (%)",
+             y = "Undergraduate Enrollment")
+      print(inter_3_table)
+    } else if(input$table == "average_p_on"){
+      inter_3_table <- ggplot(data = df_inter_12 ) +
+        geom_point(
+          mapping = aes(x = state , y = average_expense_out_state),
+          color = "blue",
+          alpha = .3
+        ) + coord_flip()
+      print(inter_3_table)
+    } else if(input$table == "average_w_p"){
+      inter_3_table <- ggplot(data = df_inter_12, aes(x = state, y = average_admit)) +
+        geom_col() +
+        labs(
+          title = "Chart #3 Average admission rate of each state",
+          y = "Percentage", x = "States") +
+        coord_flip()
+      print(inter_3_table)
+    }
+    
+  })
 }
+
+  

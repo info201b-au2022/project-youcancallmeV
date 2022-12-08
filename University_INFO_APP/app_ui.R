@@ -24,7 +24,10 @@ intro_text <- fluidPage(
     the information is in one place which makes the overall research process of understanding the 
     statistical values that may expose certain places as areas of bias and predjudice quickly and efficiently. Additionally, this project was 
     made in such a data-centric display that allows the viewer to come to their own conclusions regarding the potential
-    biases that may exist among higher education within the United States, as ultimately, these prospective students will be the ones making a selection of which university to attend."),
+    biases that may exist among higher education within the United States, as ultimately, these prospective students will be the ones making a selection of which university to attend. 
+    With that in mind however, our team has found that there is no significant correlation between the results of university application and acceptance policy, and the state that the 
+    individual universities are located in. The data shows a varience between each state, but none notable enough to definitively conclude that individual states have policies 
+    that are the driving factor behind acceptance rates, "),
   br(),
   br(),
   strong("What are the key findings?"),

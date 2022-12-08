@@ -29,35 +29,64 @@ inter_one_text <- fluidPage(
         choices = c("State Average Admission Rate" = "average_admitted",
                     "State Average SAT Submission Rate" = "average_SAT_sub",
                     "State Average Enrollment " = "average_enroll",
-                    "State Average on Campus Living Price" = "average_p_on",
-                    "State Average off Campus Living Price" = "average_p_off"),
+                    "State Average on Campus Living Expenses" = "average_p_on",
+                    "State Average White Students Precentage" = "average_w_p"),
         selected = "average_admitted"
       )
     ),
     mainPanel(
       plotOutput("inter_one"),
-      p("Analysis")
+      strong("Analysis:"),
+      br(),
+      p("The visualization above is a choropleth map that displays the average of each
+        variables in each states of the U.S. The variavbles displayed including:",
+        em("average Admission, average SAT submission rate, aver enrollment, average on
+           campus living expenses and average whit student precentage."),
+        "In this visualization, a darker color means a higher number of the variable. ")
     )
   )
 )
 
 interactive_page_1 <- tabPanel(
   "Choropleth map",
-  h3("Interactive Visulization# 1"),
+  h3("Interactive Visulization #1"),
   inter_one_text)
 #----------------------------------------------------------------------------#
 
 #----------------------------------------------------------------------------#
 # Interactive page 2(interactive_page_2), create by: Hanjiang Xu
 inter_two_text <- fluidPage(
-  h3("headings"),
-  p("page content"),
-  textOutput(outputId = 'inter_two')
+  sidebarLayout(
+    sidebarPanel(
+      helpText("This side panle provides the selection of four pairs correlations 
+               that coule be displayed"),
+      selectInput(
+        inputId = "corr",
+        label = "Correlations selections: Admission Rate vs.",
+        choices = c("SAT Submission Rate" = "average_SAT_sub",
+                    "Enrollment " = "average_enroll",
+                    "Campus Living Expenses" = "average_p_on",
+                    "White Students Precentage" = "average_w_p"),
+        selected = "average_SAT_sub"
+      )
+    ),
+    mainPanel(
+      plotOutput("inter_two"),
+      strong("Analysis:"),
+      br(),
+      p("This visualization displays a scatter plot with a smooth line that shows 
+        the correlation between variables. Each selection in the left side panle 
+        will give a different correlation polt between variables. For example, 
+        the smooth line shows that there might be a slightly negative correlation 
+        between admission rate and SAT submission rate. This is a understandable 
+        prediction since schools that require SAT scores are usually more competetive.")
+    )
+  )
 )
 
 interactive_page_2 <- tabPanel(
-  "Visualization #2",
-  h3("some heading"),
+  "Correlations between variables",
+  h3("Interactive Visulization #2"),
   inter_two_text)
 #----------------------------------------------------------------------------#
 

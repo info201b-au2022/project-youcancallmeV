@@ -59,11 +59,11 @@ server <- function(input, output){
         labs(title = "United States University/College Average Living Price on Campus") + 
         theme_bw()
       print(inter_1_map)
-    } else if(input$var == "average_p_off"){
-      inter_1_map <- ggplot(df_map, aes(long, lat, group = group, fill = average_p_off)) +
+    } else if(input$var == "average_w_p"){
+      inter_1_map <- ggplot(df_map, aes(long, lat, group = group, fill = average_w_p)) +
         geom_polygon(color="grey") + 
         scale_fill_continuous(low = "palegreen", high = "palegreen4")  +
-        labs(title = "United States University/College Average Living Price off Campus") + 
+        labs(title = "United States University/College Average White Students Percentage") + 
         theme_bw()
       print(inter_1_map)
     }
@@ -72,9 +72,41 @@ server <- function(input, output){
   
   #----------------------------------------------------------------------------#
   # renders for interactive page 2, created by: Hanjiang Xu (V)
-  output$inter_two <- renderText({
-    inter_2 <- paste0("this would be the second visulization")
-    return(inter_2)
+  output$inter_two <- renderPlot({
+    if(input$corr == "average_SAT_sub"){
+      inter_2_scatter <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = SAT)) +
+        geom_point(color = "deepskyblue") + 
+        geom_smooth(color = "dodgerblue4") + 
+        labs(title = "Correlation between admission rate and SAT submission rate",
+             x = "Admission Rate (%)",
+             y = "SAT Submission Rate (%)")
+      print(inter_2_scatter)
+    } else if(input$corr == "average_enroll"){
+      inter_2_scatter <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = Enrollment)) +
+        geom_point(color = "darkorange1") + 
+        geom_smooth(color = "darkorange4") + 
+        labs(title = "Correlation between admission rate and undergraduate enrollment",
+             x = "Admission Rate (%)",
+             y = "Undergraduate Enrollment")
+      print(inter_2_scatter)
+    } else if(input$corr == "average_p_on"){
+      inter_2_scatter <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = on)) +
+        geom_point(color = "deepskyblue3") + 
+        geom_smooth(color = "darkslategray4") + 
+        labs(title = "Correlation between admission rate and on campus living expenses",
+             x = "Admission Rate (%)",
+             y = "On Campus Living Expenses ($)")
+      print(inter_2_scatter)
+    } else if(input$corr == "average_w_p"){
+      inter_2_scatter <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = precent)) +
+        geom_point(color = "goldenrod1") + 
+        geom_smooth(color = "goldenrod4") + 
+        labs(title = "Correlation between admission rate and white student precentage",
+             x = "Admission Rate (%)",
+             y = "White Student Precentage (%)")
+      print(inter_2_scatter)
+    }
+
   })
   #----------------------------------------------------------------------------#
   

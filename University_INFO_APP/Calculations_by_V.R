@@ -15,8 +15,8 @@ college_admission_aggregated <- college_admission %>%
     Percent.admitted...total,
     Percent.of.freshmen.submitting.SAT.scores,
     Estimated.undergraduate.enrollment..total,
-    Total.price.for.in.state.students.living.on.campus.2013.14,
-    Total.price.for.out.of.state.students.living.on.campus.2013.14
+    Total.price.for.out.of.state.students.living.on.campus.2013.14,
+    Percent.of.total.enrollment.that.are.White
   )
 
 # ignore all the NA, this is the main data frame that we are going to use 
@@ -28,7 +28,7 @@ df_inter_12 <- college_df
 df_inter_12$State.abbreviation <- tolower(df_inter_12$State.abbreviation)
 
 # Change the column names for better understanding 
-colnames(df_inter_12) <- c("Name", "state", "Admission", "SAT", "Enrollment", "on", "off")
+colnames(df_inter_12) <- c("Name", "state", "Admission", "SAT", "Enrollment", "on", "precent")
 
 # Calculate the average for each variable for all states
 df_inter <- df_inter_12 %>%
@@ -38,7 +38,7 @@ df_inter <- df_inter_12 %>%
     average_SAT_sub = mean(SAT),
     average_enroll = mean(Enrollment),
     average_p_on = mean(on),
-    average_p_off = mean(off)
+    average_w_p = mean(precent)
   ) 
 
 # get lat and lng of the states 

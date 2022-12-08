@@ -16,17 +16,16 @@ intro_text <- fluidPage(
     run their acceptance process. To help the users that are 
     experiencing difficulties understanding such a complex topic, our project enables students to quickly gain an understanding of multiple statistical categories 
     (e.g. total number of enrollments, ACT/SAT scores, tuition) 
-    on universities, as well as compare that data on a state-by-state basis. Our project helps the users to save time as all 
+    on universities, as well as compare that data on a state-by-state basis. The data set we use, covers around 1,534 institutions in America and 108 characteristic that colleges might obtain. 
+    This dataset, sourced from each indivudual university and compiled by Samson Qian of The Massachusetts Institute of Technology was chosen because of its 
+    large scope which encompasses almost every college in the United States, as well as its data points that we found were 
+    critical to the aims of our project.
+    Our project helps the users to save time as all 
     the information is in one place which makes the overall research process of understanding the 
     statistical values that may expose certain places as areas of bias and predjudice quickly and efficiently. Additionally, this project was 
     made in such a data-centric display that allows the viewer to come to their own conclusions regarding the potential
     biases that may exist among higher education within the United States, as ultimately, these prospective students will be the ones making a selection of which university to attend."),
   br(),
-  strong("What are the research questions?"),
-  p(""),
-  br(),
-  strong("What data was analyzed?"),
-  p(""),
   br(),
   strong("What are the key findings?"),
   p("")

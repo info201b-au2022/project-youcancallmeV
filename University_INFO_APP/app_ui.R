@@ -41,8 +41,8 @@ inter_one_text <- fluidPage(
       br(),
       p("The visualization above is a choropleth map that displays the average of each
         variables in each states of the U.S. The variavbles displayed including:",
-        em("average Admission, average SAT submission rate, aver enrollment, average on
-           campus living expenses and average whit student precentage."),
+        em("average Admission, average SAT submission rate, averrage enrollment, average on
+           campus living expenses and average white student percentage."),
         "In this visualization, a darker color means a higher number of the variable. ")
     )
   )
@@ -126,7 +126,24 @@ interactive_page_3 <- tabPanel(
 #----------------------------------------------------------------------------#
 # Summary page (summary_page), create by:
 summary_text <- fluidPage(
-  h2("yuhhh"),
+  h2("Number One"),
+  h4("Plan Ahead And Set Goals!: Getting information on University and College is extremely time consuming"),
+  p("For example, by the visualization that displayed the average of each variables in each states of the U.S including: average 
+  admission rate, average SAT submission rate, averrage enrollment, average on campus living expenses and average white student percentage,
+    we learned that there are so many schools, information which is difficult. Therefore, this teaches us that we should chose one or two 
+    factors to focus on (e.g. geographical, economical, etc.) for application process."), 
+  h2("Number Two"),
+  h4("There may be a relationship between admission rate and SAT submission rate!"), 
+  p("According to the second interactive visualization (the smooth line), there might be a slightly negative correlation between admission
+    rate and SAT submission rate. This could be a useful takeaway for students, where the graph indicats that schools that require SAT scores 
+    could be more competitive. "),
+  h2("Number Three"),
+  h4("Affordable Cost of Attendance"),
+  p("As seen in the interaction visualization, cost really affects addmission rates and more. It is imporatant to look at 
+    how much tuition and fees will cost and whether there are different rates for in-state and out-of-state students. Through P1 to P3, we have also 
+    found that there are a lot of students having financial aid opportunities and scholarships bringing tuition cost down to a reasonable level
+    so there are solutions and good options students could consider!"),
+  h2("Number Four"),
   p("whaaa"),
 )
 
@@ -266,8 +283,8 @@ report_text <- fluidPage(
   
   p("(Table 1. Summary of Dataset)"),
   
-  imageOutput("home_img"),
-  
+ imageOutput("home_img"),
+
   h3("Expected Limitations"),
   p("The following are some implications of our project:"),
   p("・We expect our findings to provide simple to comprehend data visualizations that help the user more succinctly review their options in 
@@ -347,16 +364,20 @@ report_text <- fluidPage(
   p("We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of 
   inspiration on our project."),
   h3("References"),
-  p("The following is the citation to our database:",
+  p("The following is the citation to our database:"),
+ 
     em("College Admissions. (2018, November 27). Kaggle. https://www.kaggle.com/datasets/samsonqian/college-admissions"), 
-    "The followings are few other research we came across while finding the best data for our project",
-    em("    * Dix, W. (2016, July 25). The Agony Of College Choice And How To Get Through It. Forbes. 
-    https://www.forbes.com/sites/willarddix/2016/07/25/the-agony-of-college-choice-and-how-to-get-through-it/?sh=51bfbfe53e53"),
-    em("    * Who Are Key Website Project Stakeholders in Higher Education? (2022, January 19). OHO Interactive. 
-   https://www.oho.com/blog/website-project-stakeholders-higher-education"),
-    em("    * Shahin, M., Chaudron, M. R., Hussain, W., Shams, R., Perera, H., Oliver, G., & Whittle, J. (2022). 
+    p("The followings are few other research we came across while finding the best data for our project:"),
+    p(em("    * Dix, W. (2016, July 25). The Agony Of College Choice And How To Get Through It. Forbes. 
+    https://www.forbes.com/sites/willarddix/2016/07/25/the-agony-of-college-choice-and-how-to-get-through-it/?sh=51bfbfe53e53")),
+ 
+    p(em("    * Who Are Key Website Project Stakeholders in Higher Education? (2022, January 19). OHO Interactive. 
+   https://www.oho.com/blog/website-project-stakeholders-higher-education")),
+ 
+    p(em("    * Shahin, M., Chaudron, M. R., Hussain, W., Shams, R., Perera, H., Oliver, G., & Whittle, J. (2022). 
     Human values in software development artefacts: A case study on issue discussions in three Android applications. 
     Information and Software Technology, 141, 106731. https://doi.org/10.1016/j.infsof.2021.106731")), 
+
   h3("Thank you for visiting our site!!"))
   
 

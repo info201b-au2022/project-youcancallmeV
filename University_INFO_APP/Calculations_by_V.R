@@ -47,3 +47,4 @@ df_map <- map_data("state") %>%
   rename(state = region) %>%
   left_join(df_inter, by = "state")
 #----------------------------------------------------------------------------#
+

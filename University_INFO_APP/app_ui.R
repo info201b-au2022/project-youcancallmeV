@@ -31,31 +31,48 @@ state_selection <- sort(unique(df_inter_12$State.abbreviation))
 #----------------------------------------------------------------------------#
 # Introductory page(introductory_page), create by: Jett
 intro_text <- fluidPage(
-  h3("Examining the Potential Biases of the American College"),
-  p("The college application process can be frustrating.
+  h2("Examining the Potential Biases of the American College"),
+  h5("    The college application process can be frustrating.
     Getting information on colleges and universities, looking for 
     financial aid, looking for the desired degree, as well as balancing 
     school life is usually extremely challenging. What's more, the selection process 
-    that colleges go through has been faced with increasing scrutiny in the current times, causing many 
-    prospective college student to have a want or need examine the results of how colleges from different areas 
-    run their acceptance process. To help the users that are 
-    experiencing difficulties understanding such a complex topic, our project enables students to quickly gain an understanding of multiple statistical categories 
-    (e.g. total number of enrollments, ACT/SAT scores, tuition) 
-    on universities, as well as compare that data on a state-by-state basis. The data set we use, covers around 1,534 institutions in America and 108 characteristic that colleges might obtain. 
-    This dataset, sourced from each indivudual university and compiled by Samson Qian of The Massachusetts Institute of Technology was chosen because of its 
-    large scope which encompasses almost every college in the United States, as well as its data points that we found were 
-    critical to the aims of our project.
-    Our project helps the users to save time as all 
-    the information is in one place which makes the overall research process of understanding the 
-    statistical values that may expose certain places as areas of bias and predjudice quickly and efficiently. Additionally, this project was 
-    made in such a data-centric display that allows the viewer to come to their own conclusions regarding the potential
-    biases that may exist among higher education within the United States, as ultimately, these prospective students will be the ones making a selection of which university to attend. 
-    With that in mind however, our team has found that there is no significant correlation between the results of university application and acceptance policy, and the state that the 
-    individual universities are located in. The data shows a varience between each state, but none notable enough to definitively conclude that individual states have policies 
-    that are the driving factor behind acceptance rates, nor is there notable enough results to conclude a correlation between admission rates and 
+    that colleges go through has been faced with increasing scrutiny in the 
+    current times, causing many prospective college student to have a want or 
+    need examine the results of how colleges from different areas 
+    run their acceptance process."),
+    br(),
+    h5("    To help the users that are 
+    experiencing difficulties understanding such a complex topic, our project 
+    enables students to quickly gain an understanding of multiple statistical categories 
+    (e.g. total number of enrollments, ACT/SAT scores, tuition, race) on universities, 
+    as well as compare that data on a state-by-state basis."),
+    br(),
+    h5("    The data set we use, 
+    covers around 1,534 institutions in America and 108 characteristic that colleges 
+    might obtain. This dataset, sourced from each indivudual university and compiled 
+    by Samson Qian of The Massachusetts Institute of Technology was chosen because 
+    of its large scope which encompasses almost every college in the United States, 
+    as well as its data points that we found were critical to the aims of our project."),
+  br(),
+  h5("    Our project helps the users to save time as all the information is in one 
+    place which makes the overall research process of understanding the statistical 
+    values that may expose certain places as areas of bias and predjudice quickly 
+    and efficiently. Additionally, this project was made in such a data-centric 
+    display that allows the viewer to come to their own conclusions regarding 
+    the potential biases that may exist among higher education within the United 
+    States, as ultimately, these prospective students will be the ones making a 
+    selection of which university to attend. With that in mind however, our team 
+    has found that there is no significant correlation between the results of 
+    university application and acceptance policy, and the state that the 
+    individual universities are located in. The data shows a varience between 
+    each state, but none notable enough to definitively conclude that individual 
+    states have policies that are the driving factor behind acceptance rates, 
+    nor is there notable enough results to conclude a correlation between admission rates and 
     various statistics such as total enrollment, SAT submission rate, or yearly tuition."),
   br(),
-  #img(src='cherry2k.jpg', align = "center", width = "100%", height = "100%")
+  h3("So, if you are interested in our project, please feel free to click on the next page"),
+  HTML('<center><img src="cherry2k.jpg" width = "70%", height = "70%"></center>')
+  #img(src='cherry2k.jpg', align = "center", width = "70%", height = "70%")
 )
 
 
@@ -175,24 +192,24 @@ interactive_page_3 <- tabPanel(
 # Summary page (summary_page), create by:
 summary_text <- fluidPage(
   h2("Number One"),
-  h4("Plan Ahead And Set Goals!: Getting information on University and College is extremely time consuming"),
+  h3("Plan Ahead And Set Goals!: Getting information on University and College is extremely time consuming"),
   p("For example, by the visualization that displayed the average of each variables in each states of the U.S including: average 
   admission rate, average SAT submission rate, averrage enrollment, average on campus living expenses and average white student percentage,
     we learned that there are so many schools, information which is difficult. Therefore, this teaches us that we should chose one or two 
     factors to focus on (e.g. geographical, economical, etc.) for application process."), 
   h2("Number Two"),
-  h4("Affordable Cost of Attendance"),
+  h3("Affordable Cost of Attendance"),
   p("As seen in the interaction visualization, cost really affects enrollments rates and more. It is imporatant to look at 
     how much tuition and fees will cost and whether there are different rates for in-state and out-of-state students. Through P1 to P3, we have also 
     found that there are a lot of students having financial aid opportunities and scholarships bringing tuition cost down to a reasonable level
     so there are solutions and good options students could consider!"),
   h2("Number Three"),
-  h4("Admission rate and SAT submission rate!"), 
+  h3("Admission rate and SAT submission rate!"), 
   p("According to the second interactive visualization (the smooth line), there might be a slightly negative correlation between admission
     rate and SAT submission rate. This could be a useful takeaway for students, where the graph indicats that schools that require SAT scores 
-    could be more competitive. "),
+    could be more competitive."),
   h2("Number Four"),
-  h4("Admission rate and Geographic locations"),
+  h3("Admission rate and Geographic locations"),
   p("There is a relationship between the admission rate and it's geographical location From interaction visualization 2, we are able to see that
     California has a low admission rate compared to other states. This could be because schools in that area is really popular (due to high quality education, 
     climate, and the population) where there is an increase in the applications, making the acceptance rate significantly lower than other states. ")
@@ -221,7 +238,7 @@ report_text <- fluidPage(
   h3("Affiliation"),
   p("INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
   
-  h3("Abstract:"),
+  h3("Abstract"),
   p("In this project, we are concerned with whether potential college students have an efficient way of selecting 
   a suitable college in the United States. Because there are so many colleges and universities in America, it becomes 
   complicated when doing research. To address this concern, we plan to design a simple tool that allows users to select colleges 
@@ -332,7 +349,7 @@ report_text <- fluidPage(
   
   p("(Table 1. Summary of Dataset)"),
   
-  #img(src='table_image.png', align = "center", width = "100%", height = "100%"),
+  img(src='table_image.png', align = "center", width = "70%", height = "70%"),
 
   h3("Expected Limitations"),
   p("The following are some implications of our project:"),

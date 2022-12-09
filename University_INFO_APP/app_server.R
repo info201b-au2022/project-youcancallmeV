@@ -1,6 +1,7 @@
 library(shiny)
 library(dplyr)
 library(tidyverse)
+library(maps)
 
 #This is the 
 college_admission <- read.csv(
@@ -45,6 +46,7 @@ df_map <- map_data("state") %>%
   group_by(region) %>%
   rename(state = region) %>%
   left_join(df_inter, by = "state")
+
 #----------------------------------------------------------------------------#
 
 #----------------------------------------------------------------------------#

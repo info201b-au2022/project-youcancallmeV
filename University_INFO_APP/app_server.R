@@ -23,9 +23,9 @@ college_admission_aggregated <- college_admission %>%
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
 
 # Source the calculations from V
-source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+#source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 #source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
-#source("~/Documents/info201/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
+source("~/Documents/info201/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 #----------------------------------------------------------------------------#
 # Following is the server function 
 server <- function(input, output){

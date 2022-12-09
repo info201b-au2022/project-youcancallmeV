@@ -1,5 +1,5 @@
 library(shiny)
-
+library(dplyr)
 # This is the main ui page for our app. Please put your work in desired sections.
 
 # read data frame for convenience 

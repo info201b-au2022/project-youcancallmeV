@@ -24,14 +24,13 @@ college_df <- college_admission_aggregated[complete.cases(college_admission_aggr
 # Calculations from V
 #----------------------------------------------------------------------------#
 # This following section is calculations by V.
-df_inter_12 <- college_df
-df_inter_12$State.abbreviation <- tolower(df_inter_12$State.abbreviation)
+college_df$State.abbreviation <- tolower(college_df$State.abbreviation)
 
 # Change the column names for better understanding 
-colnames(df_inter_12) <- c("Name", "state", "Admission", "SAT", "Enrollment", "on", "precent")
+colnames(college_df) <- c("Name", "state", "Admission", "SAT", "Enrollment", "on", "precent")
 
 # Calculate the average for each variable for all states
-df_inter <- df_inter_12 %>%
+df_inter <- college_df %>%
   group_by(state) %>%
   mutate(
     average_admitted = mean(Admission),
@@ -47,11 +46,6 @@ df_map <- map_data("state") %>%
   left_join(df_inter, by = "state")
 #----------------------------------------------------------------------------#
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> c07ca533e544b18687e5d05ca1599b493069ec2c
 #----------------------------------------------------------------------------#
 # Following is the server function 
 server <- function(input, output){
@@ -101,7 +95,7 @@ server <- function(input, output){
   # renders for interactive page 2, created by: Hanjiang Xu (V)
   output$inter_two <- renderPlot({
     if(input$corr == "average_SAT_sub"){
-      inter_2_scatter <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = SAT)) +
+      inter_2_scatter <- ggplot(data = college_df, mapping = aes(x = Admission, y = SAT)) +
         geom_point(color = "deepskyblue") + 
         geom_smooth(color = "dodgerblue4") + 
         labs(title = "Correlation between admission rate and SAT submission rate",
@@ -109,7 +103,7 @@ server <- function(input, output){
              y = "SAT Submission Rate (%)") + theme(text = element_text(size = 20))
       print(inter_2_scatter)
     } else if(input$corr == "average_enroll"){
-      inter_2_scatter <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = Enrollment)) +
+      inter_2_scatter <- ggplot(data = college_df, mapping = aes(x = Admission, y = Enrollment)) +
         geom_point(color = "darkorange1") + 
         geom_smooth(color = "darkorange4") + 
         labs(title = "Correlation between admission rate and undergraduate enrollment",
@@ -117,7 +111,7 @@ server <- function(input, output){
              y = "Undergraduate Enrollment") + theme(text = element_text(size = 20))
       print(inter_2_scatter)
     } else if(input$corr == "average_p_on"){
-      inter_2_scatter <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = on)) +
+      inter_2_scatter <- ggplot(data = college_df, mapping = aes(x = Admission, y = on)) +
         geom_point(color = "deepskyblue3") + 
         geom_smooth(color = "darkslategray4") + 
         labs(title = "Correlation between admission rate and on campus living expenses",
@@ -125,7 +119,7 @@ server <- function(input, output){
              y = "On Campus Living Expenses ($)") + theme(text = element_text(size = 20))
       print(inter_2_scatter)
     } else if(input$corr == "average_w_p"){
-      inter_2_scatter <- ggplot(data = df_inter_12, mapping = aes(x = Admission, y = precent)) +
+      inter_2_scatter <- ggplot(data = college_df, mapping = aes(x = Admission, y = precent)) +
         geom_point(color = "goldenrod1") + 
         geom_smooth(color = "goldenrod4") + 
         labs(title = "Correlation between admission rate and white student precentage",

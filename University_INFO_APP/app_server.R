@@ -21,10 +21,6 @@ college_admission_aggregated <- college_admission %>%
 # ignore all the NA, this is the main data frame that we are going to use 
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
 
-# Source the calculations from V
-source("~/Documents/info201/projects/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
-#source("C:/Users/stlp/Documents/info201/assignments/Project1/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
-#source("~/Documents/info201/project-youcancallmeV/University_INFO_APP/Calculations_by_V.R")
 # Calculations from V
 #----------------------------------------------------------------------------#
 # This following section is calculations by V.
@@ -51,8 +47,6 @@ df_map <- map_data("state") %>%
   left_join(df_inter, by = "state")
 #----------------------------------------------------------------------------#
 
-
->>>>>>> bfe2ba4a5a17ffd622db5ab12d5485c1164aa584
 #----------------------------------------------------------------------------#
 # Following is the server function 
 server <- function(input, output){

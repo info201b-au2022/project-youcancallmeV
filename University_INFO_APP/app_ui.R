@@ -2,7 +2,7 @@ library(shiny)
 
 # This is the main ui page for our app. Please put your work in desired sections.
 
-# read data frame for convience 
+# read data frame for convenience 
 #This is the 
 college_admission <- read.csv(
   "https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv",
@@ -22,7 +22,7 @@ college_admission_aggregated <- college_admission %>%
 
 # ignore all the NA, this is the main data frame that we are going to use 
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
-#change state abbriviation for convicence
+#change state abbreviation for convenience
 df_inter_12 <- college_df
 df_inter_12$State.abbreviation <- tolower(df_inter_12$State.abbreviation)
 # state selection choices 
@@ -208,17 +208,17 @@ summary_page <- tabPanel(
 # Report page (report_page), create by:
 report_text <- fluidPage(
   
-  p(strong("Date 🗓"), 
+  p(strong("Date"), 
     "12_07, Autumn 2022"),
   p(strong("Code Name:"), 
     "Sleep, Zebra, Sleep"),
   
-  h3("Authors💻"),
+  h3("Authors"),
   p("Hanjiang Xu (xhj1026@uw.edu)"),
   p("Risa Nabari (risan03@uw.edu)"),
   p("Jett Chang-Lam (jcl9292@uw.edu)"),
   
-  h3("Affiliation 🏫"),
+  h3("Affiliation"),
   p("INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
   
   h3("Abstract:"),
@@ -410,13 +410,11 @@ report_text <- fluidPage(
     these information as we thought this was the most relevant and useful information when doing a research on University/College application as it 
     includes information on academics, economic, and the geographical location. In addition, even though our project provides the basic details of 
     institutions, it did not include some key information such as the application deadline. We believe it is important for potential college students to know their deadlines yet our 
-    database does not include this information. If there is an opportunity to do the same project,
-    we would like to use more datasets to increase reliability as this data set is slightly out of date. Our data set was collected on Kaggle, and posted by 
-    Samson Qian, but the author did not provide information on where he got the data. However, overall, I believe it gave a lot of helpful insights 
-    for finding an efficient way of selecting a suitable college which has a lot of potential. Overall, we hope this application can help 
-    students who are stuck on University/College research to use our tool to have a broad idea for each of the data. From there, we would recommend more detailed 
-    research on their intended schools."),
-  p("Through the interactive charts, we can also conclude that......"), 
+    database does not include this information. If there is an opportunity to do the same project, we would like to use more datasets to increase 
+    reliability as this data set is slightly out of date. Our data set was collected on Kaggle, and posted by Samson Qian, but the author did not 
+    provide information on where he got the data. However, overall, I believe it gave a lot of helpful insights for finding an efficient way of 
+    selecting a suitable college which has a lot of potential. Overall, we hope this application can help students who are stuck on University/College
+    research to use our tool to have a broad idea for each of the data. From there, we would recommend more detailed research on their intended schools."),
   h3("Acknowledgements"),
   p("We would like to thank the individual, Samson Qian, who had published this data on Kaggle. This data collection have gave us a lot of 
   inspiration on our project."),

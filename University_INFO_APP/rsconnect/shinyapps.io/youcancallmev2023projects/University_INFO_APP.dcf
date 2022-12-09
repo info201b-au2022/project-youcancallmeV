@@ -5,10 +5,10 @@ account: youcancallmev2023projects
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7852372
-bundleId: 6613204
+bundleId: 6613244
 url: https://youcancallmev2023projects.shinyapps.io/University_INFO_APP/
-when: 1670544625.0569
-lastSyncTime: 1670544625.05691
+when: 1670545789.65366
+lastSyncTime: 1670545789.65368
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: Calculations_by_V.R|www/cherry2k.jpg|www/table_image.png

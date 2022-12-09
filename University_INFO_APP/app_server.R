@@ -47,6 +47,11 @@ df_map <- map_data("state") %>%
   left_join(df_inter, by = "state")
 #----------------------------------------------------------------------------#
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c07ca533e544b18687e5d05ca1599b493069ec2c
 #----------------------------------------------------------------------------#
 # Following is the server function 
 server <- function(input, output){
@@ -128,7 +133,6 @@ server <- function(input, output){
              y = "White Student Precentage (%)") + theme(text = element_text(size = 20))
       print(inter_2_scatter)
     }
-
   })
   #----------------------------------------------------------------------------#
   # renders for interactive page 3, created by: Jett Chang-Lam

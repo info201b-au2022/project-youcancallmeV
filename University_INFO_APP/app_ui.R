@@ -2,7 +2,7 @@ library(shiny)
 
 # This is the main ui page for our app. Please put your work in desired sections.
 
-# read data frame for convience 
+# read data frame for convenience 
 #This is the 
 college_admission <- read.csv(
   "https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv",
@@ -22,7 +22,7 @@ college_admission_aggregated <- college_admission %>%
 
 # ignore all the NA, this is the main data frame that we are going to use 
 college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
-#change state abbriviation for convicence
+#change state abbreviation for convenience
 df_inter_12 <- college_df
 df_inter_12$State.abbreviation <- tolower(df_inter_12$State.abbreviation)
 # state selection choices 
@@ -208,17 +208,17 @@ summary_page <- tabPanel(
 # Report page (report_page), create by:
 report_text <- fluidPage(
   
-  p(strong("Date 🗓"), 
+  p(strong("Date"), 
     "12_07, Autumn 2022"),
   p(strong("Code Name:"), 
     "Sleep, Zebra, Sleep"),
   
-  h3("Authors💻"),
+  h3("Authors"),
   p("Hanjiang Xu (xhj1026@uw.edu)"),
   p("Risa Nabari (risan03@uw.edu)"),
   p("Jett Chang-Lam (jcl9292@uw.edu)"),
   
-  h3("Affiliation 🏫"),
+  h3("Affiliation"),
   p("INFO-201: Technical Foundations of Informatics - The Information School - University of Washington"),
   
   h3("Abstract:"),

@@ -1,7 +1,32 @@
 library(shiny)
-library(plotly)
 
 # This is the main ui page for our app. Please put your work in desired sections.
+
+# read data frame for convience 
+#This is the 
+college_admission <- read.csv(
+  "https://raw.githubusercontent.com/info201b-au2022/project-youcancallmeV/main/data/College%20Admission.csv",
+  stringsAsFactors = FALSE)
+# Aggregate the data set 
+college_admission_aggregated <- college_admission %>%
+  group_by(State.abbreviation) %>%
+  select(
+    Name,
+    State.abbreviation,
+    Percent.admitted...total,
+    Percent.of.freshmen.submitting.SAT.scores,
+    Estimated.undergraduate.enrollment..total,
+    Total.price.for.in.state.students.living.on.campus.2013.14,
+    Total.price.for.out.of.state.students.living.on.campus.2013.14
+  )
+
+# ignore all the NA, this is the main data frame that we are going to use 
+college_df <- college_admission_aggregated[complete.cases(college_admission_aggregated), ]
+#change state abbriviation for convicence
+df_inter_12 <- college_df
+df_inter_12$State.abbreviation <- tolower(df_inter_12$State.abbreviation)
+# state selection choices 
+state_selection <- sort(unique(df_inter_12$State.abbreviation))
 
 #----------------------------------------------------------------------------#
 # Introductory page(introductory_page), create by: Jett
@@ -24,12 +49,13 @@ intro_text <- fluidPage(
     the information is in one place which makes the overall research process of understanding the 
     statistical values that may expose certain places as areas of bias and predjudice quickly and efficiently. Additionally, this project was 
     made in such a data-centric display that allows the viewer to come to their own conclusions regarding the potential
-    biases that may exist among higher education within the United States, as ultimately, these prospective students will be the ones making a selection of which university to attend."),
+    biases that may exist among higher education within the United States, as ultimately, these prospective students will be the ones making a selection of which university to attend. 
+    With that in mind however, our team has found that there is no significant correlation between the results of university application and acceptance policy, and the state that the 
+    individual universities are located in. The data shows a varience between each state, but none notable enough to definitively conclude that individual states have policies 
+    that are the driving factor behind acceptance rates, nor is there notable enough results to conclude a correlation between admission rates and 
+    various statistics such as total enrollment, SAT submission rate, or yearly tuition."),
   br(),
-  br(),
-  strong("What are the key findings?"),
-  p(""),
-  img(src='cherry2k.jpg', align = "center", width = "100%", height = "100%")
+  #img(src='cherry2k.jpg', align = "center", width = "100%", height = "100%")
 )
 
 
@@ -119,26 +145,25 @@ interactive_page_2 <- tabPanel(
 inter_three_text <- fluidPage(
   sidebarLayout(
     sidebarPanel(
-      helpText("Choose a Statistical Category to Examine on a State-by-state Basis"),
-      selectInput(
-        inputId = "table",
-        label = "Correlations selections: Admission Rate vs.",
-        choices = c("SAT Submission Rate" = "average_SAT_sub",
-                    "Enrollment" = "average_enrollment",
-                    "Admission Rate" = "average_admission"),
-        selected = "average_SAT_sub"
-      )
+      helpText("Choose a/or multipul states to see their average SAT submission rate"),
+      selectInput(inputId = "state_select", 
+                  label = "Choose a state to display",
+                  choices = state_selection,
+                  selected = "washington",
+                  multiple = TRUE)
     ),
     mainPanel(
       plotOutput("inter_three"),
       strong("Analysis:"),
       br(),
-      p("This visualization shows different statistical catergories on a state-by-state basis, allowing the user to closely
-        examine the potential correlations, or non-correlations between the categories of their choosing.")
+      p("This visualization provides a comparison on SAT submission rate between
+        whatever state the user selects. We believe that the SAT is a rather stressful
+        test and students usually have to put a lot of effort into preparing. See the
+        average SAT submission rate would help students decided whether they would like 
+        to take the test in a early stage.")
     )
   )
 )
-
 
 interactive_page_3 <- tabPanel(
   "State by State Analysis",
@@ -307,7 +332,7 @@ report_text <- fluidPage(
   
   p("(Table 1. Summary of Dataset)"),
   
- imageOutput("home_img"),
+  #img(src='table_image.png', align = "center", width = "100%", height = "100%"),
 
   h3("Expected Limitations"),
   p("The following are some implications of our project:"),

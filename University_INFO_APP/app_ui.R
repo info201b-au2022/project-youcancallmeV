@@ -1,5 +1,4 @@
 library(shiny)
-library(plotly)
 
 # This is the main ui page for our app. Please put your work in desired sections.
 
@@ -56,7 +55,7 @@ intro_text <- fluidPage(
     that are the driving factor behind acceptance rates, nor is there notable enough results to conclude a correlation between admission rates and 
     various statistics such as total enrollment, SAT submission rate, or yearly tuition."),
   br(),
-  img(src='cherry2k.jpg', align = "center", width = "100%", height = "100%")
+  #img(src='cherry2k.jpg', align = "center", width = "100%", height = "100%")
 )
 
 
@@ -333,7 +332,7 @@ report_text <- fluidPage(
   
   p("(Table 1. Summary of Dataset)"),
   
-  img(src='table_image.png', align = "center", width = "100%", height = "100%"),
+  #img(src='table_image.png', align = "center", width = "100%", height = "100%"),
 
   h3("Expected Limitations"),
   p("The following are some implications of our project:"),
